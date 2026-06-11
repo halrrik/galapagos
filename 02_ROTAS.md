@@ -57,6 +57,7 @@ Consultar:
 7. `04_times/modelo_time/maturidade.md`
 8. `04_times/modelo_time/riscos.md`
 9. `04_times/modelo_time/plano_de_melhoria.md`
+10. `07_entregaveis/mam_galapagos_v1_memoria_ia.md`, se a analise envolver maturidade, MAM, avaliacao por pilar ou evolucao trimestral
 
 Saida esperada:
 
@@ -81,8 +82,9 @@ Consultar:
 1. `00_LEIA_PRIMEIRO.md`
 2. `05_metricas_e_dados/metricas_principios_e_camadas.md`
 3. `05_metricas_e_dados/catalogo_metricas_operacionais.md`
-4. `06_evidencias/README.md`, se houver evidencia fornecida
-5. `06_evidencias/dashboards/README.md`, se o material vier de painel
+4. `07_entregaveis/mam_galapagos_v1_memoria_ia.md`, quando a pergunta envolver metricas dentro do MAM ou avaliacao de maturidade
+5. `06_evidencias/README.md`, se houver evidencia fornecida
+6. `06_evidencias/dashboards/README.md`, se o material vier de painel
 
 Saida esperada:
 
@@ -106,7 +108,8 @@ Consultar:
 1. `00_LEIA_PRIMEIRO.md`
 2. `07_entregaveis/status_report.md`
 3. `08_comunicacao/README.md`
-4. Documentacao ou evidencias relacionadas ao tema
+4. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`, quando a pergunta envolver iniciativas passadas, cadastro de device ou diagnostico de projeto
+5. Documentacao ou evidencias relacionadas ao tema
 
 Saida esperada:
 
@@ -132,7 +135,8 @@ Consultar:
 2. `07_entregaveis/relatorio_periodico.md`
 3. `05_metricas_e_dados/`
 4. `04_times/`, se for especifico de time
-5. `08_comunicacao/README.md`
+5. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`, se o relatorio envolver iniciativas passadas ou diagnosticos reconstruidos
+6. `08_comunicacao/README.md`
 
 Saida esperada:
 
@@ -169,30 +173,47 @@ Saida esperada:
 - riscos;
 - proximos passos.
 
-## Rota 7 — Avaliar maturidade
+## Rota 7 — Avaliar maturidade / MAM
 
 Quando usar:
 
 - diagnostico de maturidade;
-- avaliacao de evolucao;
+- MAM;
+- Modelo de Avaliacao de Maturidade Agil Galapagos;
+- perguntas de maturidade;
+- avaliacao por pilar;
+- avaliacao trimestral;
+- visual de resultado por time;
 - plano de desenvolvimento de time.
 
 Consultar:
 
 1. `00_LEIA_PRIMEIRO.md`
-2. `04_times/modelo_time/maturidade.md`
-3. `07_entregaveis/diagnostico_de_maturidade.md`
-4. `04_times/modelo_time/anotacoes.md`
-5. `11_documentos_convertidos/05_diagnosticos/`, quando houver diagnostico convertido aplicavel
-6. Evidencias disponiveis
+2. `07_entregaveis/mam_galapagos_v1_memoria_ia.md`
+3. `04_times/modelo_time/maturidade.md`
+4. `07_entregaveis/diagnostico_de_maturidade.md`
+5. `04_times/modelo_time/anotacoes.md`
+6. `05_metricas_e_dados/metricas_principios_e_camadas.md`
+7. `05_metricas_e_dados/catalogo_metricas_operacionais.md`
+8. `11_documentos_convertidos/05_diagnosticos/`, quando houver diagnostico convertido aplicavel
+9. Evidencias disponiveis
 
 Saida esperada:
 
 - dimensoes avaliadas;
+- perguntas ou criterios, quando solicitados;
 - evidencias;
 - leitura atual;
+- metricas prioritarias de fluxo;
+- riscos;
 - recomendacoes;
-- proximos passos.
+- proximos passos;
+- aviso de que maturidade deve ser mapa de evolucao, nao ranking.
+
+Regra especifica:
+
+- O arquivo `mam_galapagos_v1_memoria_ia.md` e memoria operacional para IA. Nao copiar literalmente para materiais humanos.
+- Para apresentacoes e relatorios, reescrever em linguagem executiva natural.
 
 ## Rota 8 — Trabalhar com evidencias
 
@@ -209,6 +230,7 @@ Consultar:
 2. `06_evidencias/README.md`
 3. Subpasta correspondente ao tipo de material
 4. Pasta de metricas, times ou entregaveis conforme a pergunta
+5. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`, se a evidencia estiver relacionada a diagnosticos passados
 
 Saida esperada:
 
@@ -273,6 +295,34 @@ Saida esperada:
 - limites de uso;
 - indicacao se pode virar fonte oficial.
 
+## Rota 12 — Diagnosticar iniciativas passadas
+
+Quando usar:
+
+- pergunta sobre diagnosticos feitos anteriormente;
+- projeto de cadastro de device;
+- segunda iniciativa pendente de levantamento;
+- relatorio grafico e textual de iniciativa;
+- recuperacao de conclusoes, gargalos ou acoes discutidas em conversas anteriores.
+
+Consultar:
+
+1. `00_LEIA_PRIMEIRO.md`
+2. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`
+3. `07_entregaveis/relatorio_periodico.md`
+4. `07_entregaveis/status_report.md`
+5. `05_metricas_e_dados/metricas_principios_e_camadas.md`
+6. `05_metricas_e_dados/catalogo_metricas_operacionais.md`
+7. Evidencias, prints, CSVs ou documentos fornecidos pelo usuario
+
+Saida esperada:
+
+- deixar claro o que e memoria reconstruida e o que e dado confirmado;
+- separar evidencia, interpretacao, hipotese, risco e recomendacao;
+- nao inventar numeros;
+- reconstruir relatorio humano apenas quando houver pedido explicito;
+- indicar limites quando os dados originais nao estiverem presentes.
+
 ## Rota 11 — Atualizar o Grimorio
 
 Quando usar:
@@ -297,3 +347,7 @@ Saida esperada:
 - classificacao de sensibilidade;
 - atualizacao do patch log;
 - ajuste do indice/rotas quando necessario.
+
+Regra chave:
+
+Sempre que novo conteudo relevante for adicionado ao Grimorio, verificar se `01_INDICE.md`, `02_ROTAS.md` e `PATCH_LOG.md` precisam ser atualizados. Se o conteudo criar uma nova forma de consulta, atualizar rotas. Se apenas adicionar material dentro de rota existente, atualizar indice e patch log.
