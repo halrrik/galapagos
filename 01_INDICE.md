@@ -9,6 +9,14 @@ Este indice mostra onde procurar cada tipo de informacao dentro da aplicacao Gal
 - `PATCH_LOG.md` — historico de mudancas, decisoes e pendencias.
 - `AVISO_DE_PROPRIEDADE.md` — separacao entre metodo Grimorio, aplicacao Galapagos e materiais internos.
 
+## Pacotes consolidados para IA externa
+
+Arquivo recomendado para Claude/GPT quando houver leitura inconsistente de ZIP ou estrutura de pastas:
+
+- `galapagos_claude_context_pack_2026-06-11.md` — contexto consolidado em arquivo unico para testes de MAM, diagnosticos, metricas, papeis, documentos convertidos e limites conhecidos.
+
+Uso: subir este arquivo unico diretamente no Claude/GPT quando a IA enxergar nomes de arquivos, mas nao conseguir aplicar bem o conteudo do repositorio.
+
 ## Documentacao base
 
 Pasta: `01_documentacao_base/`
@@ -158,3 +166,5 @@ Quando a pergunta envolver Galapagos, consultar primeiro `00_LEIA_PRIMEIRO.md`, 
 Quando a pergunta envolver MAM, maturidade, avaliacao trimestral, perguntas por pilar, visual de resultado por time ou diagnostico de iniciativas passadas, consultar tambem os arquivos de memoria operacional adicionados em 2026-06-11. Esses arquivos sao base para interpretacao por IA e nao devem ser copiados literalmente em comunicacoes humanas.
 
 Quando a pergunta envolver validacao em GPT corporativo, Claude ou outra IA, usar o roteiro de validacao para diferenciar problema de conteudo, problema de rota e problema de comportamento do modelo.
+
+Quando Claude/GPT demonstrar leitura inconsistente de ZIP ou repositorio, priorizar `galapagos_claude_context_pack_2026-06-11.md` como arquivo unico consolidado.
