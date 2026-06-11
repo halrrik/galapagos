@@ -142,8 +142,13 @@ Arquivos atuais em diagnosticos:
 
 - `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md` — memoria operacional reconstruida anterior.
 - `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md` — fonte principal validada para Roubo de Credenciais e Monitoramento de Atipicidades.
+- `11_documentos_convertidos/05_diagnosticos/fontes_diagnostico_iniciativas_regulatorias_2026-06-11.md` — hierarquia de fontes do diagnostico, definindo prioridade entre CSV/Azure emulado, PPTs/relatorios apresentados, ODT validado e memoria operacional.
 
-Regra: para perguntas sobre Roubo de Credenciais, Monitoramento de Atipicidades, iniciativas regulatorias, situacao, progresso, bloqueios, problemas, homologacao, deploy ou comparativo executivo, consultar `diagnostico_iniciativas_regulatorias_validado_2026-06-11.md` antes da memoria anterior.
+Regra: para perguntas sobre Roubo de Credenciais, Monitoramento de Atipicidades, iniciativas regulatorias, situacao, progresso, bloqueios, problemas, homologacao, deploy ou comparativo executivo, consultar `diagnostico_iniciativas_regulatorias_validado_2026-06-11.md` e `fontes_diagnostico_iniciativas_regulatorias_2026-06-11.md` antes da memoria anterior.
+
+Regra: se a pergunta exigir metricas, historias, epicos, features, status, lead time, cycle time, throughput, bloqueios, Resolved versus Closed ou datas operacionais, usar CSV/Azure emulado como fonte primaria quando estiver disponivel.
+
+Regra: se a pergunta exigir narrativa apresentada para lideranca, percentuais reportados, riscos comunicados ou leitura executiva dos slides, usar PPTs/relatorios apresentados como fonte primaria quando estiverem disponiveis.
 
 Regra: documentos convertidos devem indicar origem, data de conversao e status de revisao. Materiais sensiveis ou ainda nao revisados devem permanecer em `99_revisar_antes_de_publicar/`.
 
@@ -172,7 +177,7 @@ Quando a pergunta envolver Galapagos, consultar primeiro `00_LEIA_PRIMEIRO.md`, 
 
 Quando a pergunta envolver MAM, usar como fonte principal `07_entregaveis/mam_galapagos_modelo_validado_2026-06-11.md`.
 
-Quando a pergunta envolver Roubo de Credenciais ou Monitoramento de Atipicidades, usar como fonte principal `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md`.
+Quando a pergunta envolver Roubo de Credenciais ou Monitoramento de Atipicidades, usar como fonte principal `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md` e respeitar a hierarquia de fontes definida em `fontes_diagnostico_iniciativas_regulatorias_2026-06-11.md`.
 
 Quando a pergunta envolver validacao em GPT corporativo, Claude ou outra IA, usar o roteiro de validacao para diferenciar problema de conteudo, problema de rota e problema de comportamento do modelo.
 
