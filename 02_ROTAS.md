@@ -323,6 +323,37 @@ Saida esperada:
 - reconstruir relatorio humano apenas quando houver pedido explicito;
 - indicar limites quando os dados originais nao estiverem presentes.
 
+## Rota 13 — Validar uso em GPT corporativo, Claude ou IA externa
+
+Quando usar:
+
+- testar se o Grimorio funciona em outra IA;
+- preparar perguntas de validacao;
+- comparar resposta de GPT/Claude com a memoria do repositorio;
+- diagnosticar se uma resposta falhou por falta de dado, falta de rota ou comportamento do modelo;
+- validar MAM, papeis, documentacao passada ou diagnosticos.
+
+Consultar:
+
+1. `00_LEIA_PRIMEIRO.md`
+2. `01_INDICE.md`
+3. `02_ROTAS.md`
+4. `PATCH_LOG.md`
+5. `10_historico_aprendizados/2026-06-11_roteiro_validacao_gpt_claude_memoria_ia.md`
+6. Arquivos especificos da area testada:
+   - MAM: `07_entregaveis/mam_galapagos_v1_memoria_ia.md`
+   - Diagnosticos: `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`
+   - Papeis: `11_documentos_convertidos/02_papeis_responsabilidades/README.md` e documentacao base
+   - Documentacao convertida: `11_documentos_convertidos/README.md`
+
+Saida esperada:
+
+- roteiro de perguntas;
+- criterio de avaliacao;
+- resposta esperada ou sinais de resposta correta;
+- identificacao de lacuna;
+- recomendacao de patch quando necessario.
+
 ## Rota 11 — Atualizar o Grimorio
 
 Quando usar:
