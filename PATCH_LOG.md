@@ -2,7 +2,35 @@
 
 Registro de evolução da aplicação Galápagos do método Grimório.
 
-## 2026-06-11
+## 2026-06-11 — Validação GPT/Claude
+
+### Adicionado
+
+- Roteiro de validação para testar o Grimório Galápagos em GPT corporativo, Claude ou outra IA.
+- Perguntas de validação para MAM, diagnósticos de iniciativas passadas, papéis e responsabilidades, documentos convertidos e comportamento executivo.
+- Critérios para diferenciar falha por falta de dado, falha por falta de rota e falha de comportamento do modelo.
+
+### Arquivos adicionados nesta rodada
+
+- `10_historico_aprendizados/2026-06-11_roteiro_validacao_gpt_claude_memoria_ia.md`
+
+### Atualizado
+
+- `01_INDICE.md` passou a listar o roteiro de validação em histórico/aprendizados.
+- `02_ROTAS.md` passou a incluir a Rota 13 — Validar uso em GPT corporativo, Claude ou IA externa.
+
+### Decisões
+
+- O roteiro de validação deve ser usado para testar se uma IA está usando corretamente índice, rotas, MAM, diagnósticos, papéis, documentação convertida e regras de limite.
+- Perguntas sobre iniciativas específicas só devem receber resposta factual quando houver memória ou evidência específica suficiente.
+- A ausência de resposta factual sobre `roubo de credenciais` deve ser tratada como lacuna de conteúdo, não como falha isolada do modelo.
+
+### Limites
+
+- Esta atualização não adiciona ainda dados factuais da iniciativa `roubo de credenciais`.
+- Para responder percentual entregue, data de início, quantidade de histórias, status final e problemas específicos dessa iniciativa, será necessário criar memória própria da iniciativa ou adicionar evidências originais.
+
+## 2026-06-11 — MAM e Diagnósticos
 
 ### Adicionado
 
