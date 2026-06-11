@@ -2,6 +2,44 @@
 
 Registro de evolução da aplicação Galápagos do método Grimório.
 
+## 2026-06-11 — Correção com ODTs validados
+
+### Adicionado
+
+- Modelo MAM validado a partir do arquivo `Modelo de Avaliação de Maturidade Galápagos.odt`.
+- Diagnóstico validado das iniciativas regulatórias a partir do arquivo `Diagnóstico Executivo das Iniciativas Regulatórias.odt`.
+- Blind context pack corrigido, agora contendo dados factuais de Roubo de Credenciais e Monitoramento de Atipicidades.
+
+### Arquivos adicionados nesta rodada
+
+- `07_entregaveis/mam_galapagos_modelo_validado_2026-06-11.md`
+- `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md`
+- `galapagos_blind_context_pack_2026-06-11.md`
+
+### Atualizado
+
+- `01_INDICE.md` passou a apontar o MAM validado como fonte principal quando houver divergência sobre pilares, escala, fontes de avaliação ou estrutura do modelo.
+- `01_INDICE.md` passou a apontar o diagnóstico regulatório validado como fonte principal para Roubo de Credenciais e Monitoramento de Atipicidades.
+- `01_INDICE.md` passou a diferenciar pacote cego corrigido e pacote guiado para Claude/GPT.
+
+### Correção importante
+
+- A memória anterior indicava que não havia dados suficientes sobre Roubo de Credenciais.
+- O ODT validado mostra que há, sim, informações executivas e operacionais sobre a iniciativa: início em 21/01/2026, evolução de 40% em março, evolução de 68% em abril, 78% do planejado entregue, 23 bloqueios registrados e próxima entrega prevista para 16/05.
+- A leitura correta passa a ser: Roubo de Credenciais possuía avanço técnico relevante, mas baixa conversão imediata em entrega efetiva por dependências estruturais, refinamento insuficiente, baixa participação do negócio e gargalos em homologação/deploy.
+- O diagnóstico validado não confirma conclusão final posterior, go-live definitivo ou fechamento total após esse recorte.
+
+### Decisões
+
+- Para perguntas sobre MAM, usar `07_entregaveis/mam_galapagos_modelo_validado_2026-06-11.md` como fonte principal.
+- Para perguntas sobre Roubo de Credenciais, Monitoramento de Atipicidades ou iniciativas regulatórias, usar `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md` como fonte principal.
+- Para teste cego em Claude/GPT, usar `galapagos_blind_context_pack_2026-06-11.md`.
+
+### Limites
+
+- O diagnóstico validado contém situação, progresso, problemas, bloqueios e leitura executiva das iniciativas até o recorte descrito.
+- Para afirmar conclusão final posterior ou go-live definitivo de Roubo de Credenciais, ainda é necessária evidência posterior ao diagnóstico.
+
 ## 2026-06-11 — Pacote consolidado para Claude/GPT
 
 ### Adicionado
