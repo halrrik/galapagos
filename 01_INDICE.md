@@ -9,14 +9,27 @@ Este indice mostra onde procurar cada tipo de informacao dentro da aplicacao Gal
 - `PATCH_LOG.md` — historico de mudancas, decisoes e pendencias.
 - `AVISO_DE_PROPRIEDADE.md` — separacao entre metodo Grimorio, aplicacao Galapagos e materiais internos.
 
+## Regras de resposta
+
+Pasta: `00_regras_resposta/`
+
+Uso: orientar como responder quando a informacao existe de forma completa, parcial, derivada ou inexistente no Grimorio.
+
+Arquivos principais:
+
+- `escada_de_resposta_e_uso_de_memoria_2026-06-11.md` — regra operacional para evitar falso negativo. A resposta nao deve ser binaria entre documento oficial completo e ausencia total. Deve classificar o nivel de sustentacao: fonte direta, consolidacao de fontes, leitura derivada, framework aplicavel ou lacuna real.
+
+Regra: antes de responder que nao ha informacao suficiente, verificar se existe material relacionado que permita resposta consolidada ou derivada com limite declarado.
+
 ## Pacotes consolidados para IA externa
 
 Arquivos recomendados para Claude/GPT quando houver leitura inconsistente de ZIP ou estrutura de pastas:
 
+- `galapagos_universal_context_prompt_2026-06-11.md` — contexto universal para orientar IA externa a usar o Grimorio sem respostas prontas.
 - `galapagos_blind_context_pack_2026-06-11.md` — pacote cego corrigido, sem perguntas de teste, com MAM validado e diagnostico regulatorio validado.
 - `galapagos_claude_context_pack_2026-06-11.md` — contexto consolidado com prompts e criterios de validacao.
 
-Uso: para teste cego, preferir `galapagos_blind_context_pack_2026-06-11.md`. Para teste guiado, usar `galapagos_claude_context_pack_2026-06-11.md`.
+Uso: para teste honesto de uso do Grimorio, preferir `galapagos_universal_context_prompt_2026-06-11.md` junto dos arquivos reais do Grimorio. Para teste cego com pacote consolidado, usar `galapagos_blind_context_pack_2026-06-11.md`. Para teste guiado, usar `galapagos_claude_context_pack_2026-06-11.md`.
 
 ## Documentacao base
 
@@ -178,6 +191,8 @@ Uso: guardar rascunhos e materiais ainda em preparacao. Nada nesta pasta deve se
 
 Quando a pergunta envolver Galapagos, consultar primeiro `00_LEIA_PRIMEIRO.md`, depois usar este indice e `02_ROTAS.md` para escolher os arquivos corretos.
 
+Quando a pergunta envolver resposta parcial, memoria derivada, papel sem matriz oficial, interpretacao sem documento completo ou risco de falso negativo, aplicar `00_regras_resposta/escada_de_resposta_e_uso_de_memoria_2026-06-11.md` antes de declarar ausencia total de informacao.
+
 Quando a pergunta envolver MAM, usar como fonte principal `07_entregaveis/mam_galapagos_modelo_validado_2026-06-11.md`.
 
 Quando a pergunta envolver metricas, fluxo, lead time, cycle time, throughput, bloqueios, status por time ou dados de Azure emulado, usar `05_metricas_e_dados/memoria_bases_azure_emulado_2026-06-11.md`.
@@ -186,4 +201,4 @@ Quando a pergunta envolver Roubo de Credenciais ou Monitoramento de Atipicidades
 
 Quando a pergunta envolver validacao em GPT corporativo, Claude ou outra IA, usar o roteiro de validacao para diferenciar problema de conteudo, problema de rota e problema de comportamento do modelo.
 
-Quando Claude/GPT demonstrar leitura inconsistente de ZIP ou repositorio, priorizar `galapagos_blind_context_pack_2026-06-11.md` para teste cego ou `galapagos_claude_context_pack_2026-06-11.md` para teste guiado.
+Quando Claude/GPT demonstrar leitura inconsistente de ZIP ou repositorio, priorizar `galapagos_universal_context_prompt_2026-06-11.md` junto dos arquivos reais do Grimorio para teste honesto de roteamento.
