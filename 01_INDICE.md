@@ -11,11 +11,12 @@ Este indice mostra onde procurar cada tipo de informacao dentro da aplicacao Gal
 
 ## Pacotes consolidados para IA externa
 
-Arquivo recomendado para Claude/GPT quando houver leitura inconsistente de ZIP ou estrutura de pastas:
+Arquivos recomendados para Claude/GPT quando houver leitura inconsistente de ZIP ou estrutura de pastas:
 
-- `galapagos_claude_context_pack_2026-06-11.md` — contexto consolidado em arquivo unico para testes de MAM, diagnosticos, metricas, papeis, documentos convertidos e limites conhecidos.
+- `galapagos_blind_context_pack_2026-06-11.md` — pacote cego corrigido, sem perguntas de teste, com MAM validado e diagnostico regulatorio validado.
+- `galapagos_claude_context_pack_2026-06-11.md` — contexto consolidado com prompts e criterios de validacao.
 
-Uso: subir este arquivo unico diretamente no Claude/GPT quando a IA enxergar nomes de arquivos, mas nao conseguir aplicar bem o conteudo do repositorio.
+Uso: para teste cego, preferir `galapagos_blind_context_pack_2026-06-11.md`. Para teste guiado, usar `galapagos_claude_context_pack_2026-06-11.md`.
 
 ## Documentacao base
 
@@ -93,7 +94,10 @@ Arquivos atuais:
 - `status_report.md`
 - `roadmap.md`
 - `diagnostico_de_maturidade.md`
-- `mam_galapagos_v1_memoria_ia.md` — memoria operacional do Modelo de Avaliacao de Maturidade Agil Galapagos. Usar como base de interpretacao, nao como texto final publicavel.
+- `mam_galapagos_v1_memoria_ia.md` — memoria operacional reconstruida anterior.
+- `mam_galapagos_modelo_validado_2026-06-11.md` — fonte principal validada do MAM Galapagos a partir do ODT oficial.
+
+Regra: quando houver divergencia sobre pilares, escala, fontes de avaliacao ou estrutura do MAM, usar `mam_galapagos_modelo_validado_2026-06-11.md` como fonte principal.
 
 ## Comunicacao
 
@@ -136,7 +140,10 @@ Subpastas atuais:
 
 Arquivos atuais em diagnosticos:
 
-- `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md` — memoria operacional reconstruida sobre diagnosticos de iniciativas passadas, incluindo cadastro de device e segunda iniciativa pendente de levantamento.
+- `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md` — memoria operacional reconstruida anterior.
+- `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md` — fonte principal validada para Roubo de Credenciais e Monitoramento de Atipicidades.
+
+Regra: para perguntas sobre Roubo de Credenciais, Monitoramento de Atipicidades, iniciativas regulatorias, situacao, progresso, bloqueios, problemas, homologacao, deploy ou comparativo executivo, consultar `diagnostico_iniciativas_regulatorias_validado_2026-06-11.md` antes da memoria anterior.
 
 Regra: documentos convertidos devem indicar origem, data de conversao e status de revisao. Materiais sensiveis ou ainda nao revisados devem permanecer em `99_revisar_antes_de_publicar/`.
 
@@ -163,8 +170,10 @@ Uso: guardar rascunhos e materiais ainda em preparacao. Nada nesta pasta deve se
 
 Quando a pergunta envolver Galapagos, consultar primeiro `00_LEIA_PRIMEIRO.md`, depois usar este indice e `02_ROTAS.md` para escolher os arquivos corretos.
 
-Quando a pergunta envolver MAM, maturidade, avaliacao trimestral, perguntas por pilar, visual de resultado por time ou diagnostico de iniciativas passadas, consultar tambem os arquivos de memoria operacional adicionados em 2026-06-11. Esses arquivos sao base para interpretacao por IA e nao devem ser copiados literalmente em comunicacoes humanas.
+Quando a pergunta envolver MAM, usar como fonte principal `07_entregaveis/mam_galapagos_modelo_validado_2026-06-11.md`.
+
+Quando a pergunta envolver Roubo de Credenciais ou Monitoramento de Atipicidades, usar como fonte principal `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md`.
 
 Quando a pergunta envolver validacao em GPT corporativo, Claude ou outra IA, usar o roteiro de validacao para diferenciar problema de conteudo, problema de rota e problema de comportamento do modelo.
 
-Quando Claude/GPT demonstrar leitura inconsistente de ZIP ou repositorio, priorizar `galapagos_claude_context_pack_2026-06-11.md` como arquivo unico consolidado.
+Quando Claude/GPT demonstrar leitura inconsistente de ZIP ou repositorio, priorizar `galapagos_blind_context_pack_2026-06-11.md` para teste cego ou `galapagos_claude_context_pack_2026-06-11.md` para teste guiado.
