@@ -2,6 +2,32 @@
 
 Registro de evolução da aplicação Galápagos do método Grimório.
 
+## 2026-06-11 — Pacote consolidado para Claude/GPT
+
+### Adicionado
+
+- Arquivo consolidado único para uso em Claude/GPT quando a leitura de ZIP ou estrutura de pastas for inconsistente.
+- Consolidação operacional de MAM, métricas, diagnósticos, papéis, documentos convertidos, prompts de teste e critérios de validação.
+
+### Arquivos adicionados nesta rodada
+
+- `galapagos_claude_context_pack_2026-06-11.md`
+
+### Atualizado
+
+- `01_INDICE.md` passou a listar o pacote consolidado recomendado para Claude/GPT.
+
+### Decisões
+
+- Para Claude, priorizar upload do arquivo `.md` consolidado em vez de ZIP do repositório quando houver leitura parcial ou confusa.
+- O pacote consolidado não substitui o Grimório completo; ele é uma camada de teste/portabilidade para IA externa.
+- O pacote inclui explicitamente limites sobre a iniciativa `roubo de credenciais`, para evitar alucinação de resultado factual.
+
+### Limites
+
+- O pacote consolidado ainda não adiciona dados factuais novos sobre iniciativas específicas.
+- Papéis e responsabilidades continuam com base estrutural e leitura derivada de fluxo/MAM, não documento oficial completo convertido.
+
 ## 2026-06-11 — Validação GPT/Claude
 
 ### Adicionado
