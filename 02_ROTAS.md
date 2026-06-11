@@ -82,9 +82,10 @@ Consultar:
 1. `00_LEIA_PRIMEIRO.md`
 2. `05_metricas_e_dados/metricas_principios_e_camadas.md`
 3. `05_metricas_e_dados/catalogo_metricas_operacionais.md`
-4. `07_entregaveis/mam_galapagos_v1_memoria_ia.md`, quando a pergunta envolver metricas dentro do MAM ou avaliacao de maturidade
-5. `06_evidencias/README.md`, se houver evidencia fornecida
-6. `06_evidencias/dashboards/README.md`, se o material vier de painel
+4. `05_metricas_e_dados/memoria_bases_azure_emulado_2026-06-11.md`, quando a pergunta envolver CSVs, Azure emulado, lead time, cycle time, throughput, bloqueios ou status por time
+5. `07_entregaveis/mam_galapagos_v1_memoria_ia.md`, quando a pergunta envolver metricas dentro do MAM ou avaliacao de maturidade
+6. `06_evidencias/README.md`, se houver evidencia fornecida
+7. `06_evidencias/dashboards/README.md`, se o material vier de painel
 
 Saida esperada:
 
@@ -108,8 +109,10 @@ Consultar:
 1. `00_LEIA_PRIMEIRO.md`
 2. `07_entregaveis/status_report.md`
 3. `08_comunicacao/README.md`
-4. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`, quando a pergunta envolver iniciativas passadas, cadastro de device ou diagnostico de projeto
-5. Documentacao ou evidencias relacionadas ao tema
+4. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md`, quando a pergunta envolver iniciativas regulatorias
+5. `11_documentos_convertidos/05_diagnosticos/fontes_diagnostico_iniciativas_regulatorias_2026-06-11.md`, quando houver necessidade de hierarquia entre CSV, PPT, ODT e memoria operacional
+6. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`, quando a pergunta envolver iniciativas passadas, cadastro de device ou diagnostico de projeto
+7. Documentacao ou evidencias relacionadas ao tema
 
 Saida esperada:
 
@@ -135,8 +138,9 @@ Consultar:
 2. `07_entregaveis/relatorio_periodico.md`
 3. `05_metricas_e_dados/`
 4. `04_times/`, se for especifico de time
-5. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`, se o relatorio envolver iniciativas passadas ou diagnosticos reconstruidos
-6. `08_comunicacao/README.md`
+5. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md`, se o relatorio envolver iniciativas regulatorias
+6. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`, se o relatorio envolver iniciativas passadas ou diagnosticos reconstruidos
+7. `08_comunicacao/README.md`
 
 Saida esperada:
 
@@ -189,14 +193,15 @@ Quando usar:
 Consultar:
 
 1. `00_LEIA_PRIMEIRO.md`
-2. `07_entregaveis/mam_galapagos_v1_memoria_ia.md`
-3. `04_times/modelo_time/maturidade.md`
-4. `07_entregaveis/diagnostico_de_maturidade.md`
-5. `04_times/modelo_time/anotacoes.md`
-6. `05_metricas_e_dados/metricas_principios_e_camadas.md`
-7. `05_metricas_e_dados/catalogo_metricas_operacionais.md`
-8. `11_documentos_convertidos/05_diagnosticos/`, quando houver diagnostico convertido aplicavel
-9. Evidencias disponiveis
+2. `07_entregaveis/mam_galapagos_modelo_validado_2026-06-11.md`, como fonte principal validada
+3. `07_entregaveis/mam_galapagos_v1_memoria_ia.md`, como memoria operacional anterior
+4. `04_times/modelo_time/maturidade.md`
+5. `07_entregaveis/diagnostico_de_maturidade.md`
+6. `04_times/modelo_time/anotacoes.md`
+7. `05_metricas_e_dados/metricas_principios_e_camadas.md`
+8. `05_metricas_e_dados/catalogo_metricas_operacionais.md`
+9. `11_documentos_convertidos/05_diagnosticos/`, quando houver diagnostico convertido aplicavel
+10. Evidencias disponiveis
 
 Saida esperada:
 
@@ -212,7 +217,7 @@ Saida esperada:
 
 Regra especifica:
 
-- O arquivo `mam_galapagos_v1_memoria_ia.md` e memoria operacional para IA. Nao copiar literalmente para materiais humanos.
+- Para MAM, usar `mam_galapagos_modelo_validado_2026-06-11.md` quando houver divergencia de pilares, escala ou estrutura.
 - Para apresentacoes e relatorios, reescrever em linguagem executiva natural.
 
 ## Rota 8 — Trabalhar com evidencias
@@ -230,7 +235,8 @@ Consultar:
 2. `06_evidencias/README.md`
 3. Subpasta correspondente ao tipo de material
 4. Pasta de metricas, times ou entregaveis conforme a pergunta
-5. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`, se a evidencia estiver relacionada a diagnosticos passados
+5. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md`, se a evidencia estiver relacionada a diagnosticos regulatorios
+6. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`, se a evidencia estiver relacionada a diagnosticos passados
 
 Saida esperada:
 
@@ -248,20 +254,24 @@ Quando usar:
 - uso com IA externa;
 - uso com GPT corporativo;
 - publicacao no Git;
-- materiais sensiveis.
+- materiais sensiveis;
+- uso de conectores;
+- acesso a Azure, repositorios, documentos, codigo ou reunioes.
 
 Consultar:
 
 1. `00_LEIA_PRIMEIRO.md`
 2. `09_governanca_compliance/README.md`
 3. `AVISO_DE_PROPRIEDADE.md`
-4. `11_documentos_convertidos/99_revisar_antes_de_publicar/`, quando o tema envolver documentos ainda nao revisados
+4. `10_historico_aprendizados/2026-06-11_visao_chegada_grimorio_contexto_vivo.md`, quando a pergunta envolver conectores, acesso a fontes reais ou evolucao futura
+5. `11_documentos_convertidos/99_revisar_antes_de_publicar/`, quando o tema envolver documentos ainda nao revisados
 
 Saida esperada:
 
 - recomendacao prudente;
 - limites claros;
-- separacao entre publico, privado e corporativo.
+- separacao entre publico, privado e corporativo;
+- diferenciar visao estrategica de compromisso de MVP.
 
 ## Rota 10 — Consultar documentos convertidos
 
@@ -308,12 +318,15 @@ Quando usar:
 Consultar:
 
 1. `00_LEIA_PRIMEIRO.md`
-2. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`
-3. `07_entregaveis/relatorio_periodico.md`
-4. `07_entregaveis/status_report.md`
-5. `05_metricas_e_dados/metricas_principios_e_camadas.md`
-6. `05_metricas_e_dados/catalogo_metricas_operacionais.md`
-7. Evidencias, prints, CSVs ou documentos fornecidos pelo usuario
+2. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md`, quando envolver Roubo de Credenciais ou Monitoramento de Atipicidades
+3. `11_documentos_convertidos/05_diagnosticos/fontes_diagnostico_iniciativas_regulatorias_2026-06-11.md`, para definir hierarquia de fontes
+4. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`
+5. `07_entregaveis/relatorio_periodico.md`
+6. `07_entregaveis/status_report.md`
+7. `05_metricas_e_dados/metricas_principios_e_camadas.md`
+8. `05_metricas_e_dados/catalogo_metricas_operacionais.md`
+9. `05_metricas_e_dados/memoria_bases_azure_emulado_2026-06-11.md`, quando a pergunta exigir dados operacionais
+10. Evidencias, prints, CSVs ou documentos fornecidos pelo usuario
 
 Saida esperada:
 
@@ -341,10 +354,12 @@ Consultar:
 4. `PATCH_LOG.md`
 5. `10_historico_aprendizados/2026-06-11_roteiro_validacao_gpt_claude_memoria_ia.md`
 6. Arquivos especificos da area testada:
-   - MAM: `07_entregaveis/mam_galapagos_v1_memoria_ia.md`
-   - Diagnosticos: `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`
+   - MAM: `07_entregaveis/mam_galapagos_modelo_validado_2026-06-11.md`
+   - Diagnosticos: `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md`
+   - Metricas e dados: `05_metricas_e_dados/memoria_bases_azure_emulado_2026-06-11.md`
    - Papeis: `11_documentos_convertidos/02_papeis_responsabilidades/README.md` e documentacao base
    - Documentacao convertida: `11_documentos_convertidos/README.md`
+   - Visao de chegada: `10_historico_aprendizados/2026-06-11_visao_chegada_grimorio_contexto_vivo.md`
 
 Saida esperada:
 
@@ -353,6 +368,36 @@ Saida esperada:
 - resposta esperada ou sinais de resposta correta;
 - identificacao de lacuna;
 - recomendacao de patch quando necessario.
+
+## Rota 14 — Visao de chegada do Grimorio / contexto vivo conectado
+
+Quando usar:
+
+- discutir futuro do Grimorio;
+- explicar para onde o Grimorio deve evoluir;
+- falar de memoria viva;
+- conectar reunioes, Azure, Kiro, documentos, produto, codigo, repositorios, skills ou agentes;
+- diferenciar visao estrategica de MVP;
+- preparar conversa com CTO, gerente ou lideranca sobre conectores;
+- discutir viabilidade, governanca e proximos passos para evolucao.
+
+Consultar:
+
+1. `00_LEIA_PRIMEIRO.md`
+2. `01_INDICE.md`
+3. `09_governanca_compliance/README.md`, quando envolver acesso, permissao ou dados sensiveis
+4. `10_historico_aprendizados/2026-06-11_visao_chegada_grimorio_contexto_vivo.md`
+5. `05_metricas_e_dados/memoria_bases_azure_emulado_2026-06-11.md`, quando a visao envolver Azure e metricas
+6. Documentos ou evidencias relacionados ao conector/fonte discutida
+
+Saida esperada:
+
+- deixar claro que e visao de chegada, nao escopo fechado de MVP;
+- explicar valor esperado;
+- separar capacidade desejada de capacidade ja existente;
+- apontar dependencias de governanca, conectores, permissoes e fontes oficiais;
+- propor evolucao incremental;
+- evitar prometer automacao total imediata.
 
 ## Rota 11 — Atualizar o Grimorio
 
