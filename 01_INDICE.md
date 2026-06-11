@@ -137,6 +137,9 @@ Arquivos atuais de memoria operacional:
 
 - `2026-06-11_mam_e_diagnosticos_memoria_ia.md` — registro de controle da memoria reconstruida sobre MAM e diagnosticos de iniciativas passadas.
 - `2026-06-11_roteiro_validacao_gpt_claude_memoria_ia.md` — roteiro de validacao para testar MAM, diagnosticos, papeis, documentos convertidos e comportamento executivo em GPT corporativo, Claude ou outra IA.
+- `2026-06-11_visao_chegada_grimorio_contexto_vivo.md` — visao de chegada do Grimorio como camada de memoria operacional e inteligencia contextual conectada a reunioes, Azure DevOps, documentos tecnicos, produto, codigo, skills e agentes. Nao tratar como escopo fechado de MVP.
+
+Regra: quando a pergunta envolver futuro do Grimorio, conectores, reunioes, Azure, Kiro, codigo, skills, agentes, memoria viva ou direcao estrategica, consultar `2026-06-11_visao_chegada_grimorio_contexto_vivo.md`.
 
 ## Documentos convertidos
 
@@ -198,6 +201,8 @@ Quando a pergunta envolver MAM, usar como fonte principal `07_entregaveis/mam_ga
 Quando a pergunta envolver metricas, fluxo, lead time, cycle time, throughput, bloqueios, status por time ou dados de Azure emulado, usar `05_metricas_e_dados/memoria_bases_azure_emulado_2026-06-11.md`.
 
 Quando a pergunta envolver Roubo de Credenciais ou Monitoramento de Atipicidades, usar como fonte principal `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md` e respeitar a hierarquia de fontes definida em `fontes_diagnostico_iniciativas_regulatorias_2026-06-11.md`.
+
+Quando a pergunta envolver futuro do Grimorio, visao de chegada, memoria viva, conectores, Azure DevOps, Kiro, codigo, reunioes, skills ou agentes, usar `10_historico_aprendizados/2026-06-11_visao_chegada_grimorio_contexto_vivo.md`.
 
 Quando a pergunta envolver validacao em GPT corporativo, Claude ou outra IA, usar o roteiro de validacao para diferenciar problema de conteudo, problema de rota e problema de comportamento do modelo.
 
