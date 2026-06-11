@@ -8,7 +8,7 @@ uso: fonte de contexto para perguntas futuras sobre metricas, fluxo, historias, 
 
 Este arquivo registra a memoria operacional das bases CSV recebidas para emular uma conexao com Azure DevOps.
 
-A finalidade nao e substituir o Azure real, mas permitir que a IA responda melhor perguntas sobre metricas, fluxo e diagnosticos usando uma estrutura parecida com a base de work items.
+A finalidade nao e substituir o Azure real, mas permitir que a IA responda melhor perguntas sobre metricas, fluxo e diagnosticos usando uma estrutura parecida com uma base de work items.
 
 ## Arquivos analisados
 
@@ -48,7 +48,7 @@ Cobertura de datas:
 - Resolved Date: 294/927.
 - Closed Date: 740/927.
 
-Limite importante:
+Limites importantes:
 
 - Start Date esta vazio em 100% dos registros. Portanto, cycle time baseado em Start Date nao e confiavel nesta base.
 - Story Points possui cobertura muito baixa: 7/927.
@@ -94,6 +94,12 @@ Estados principais:
 - Em homologacao: 4.
 - Alinhamento Estrategico: 3.
 - Homologacao: 3.
+- Em Desenvolvimento: 2.
+- Em Andamento: 1.
+- Em Discovery: 1.
+- Em Validacao: 1.
+- Quebra em historias: 1.
+- QA: 1.
 
 Area Path:
 
@@ -106,7 +112,20 @@ Cobertura de datas:
 - Resolved Date: 18/233.
 - Closed Date: 184/233.
 
-Limite importante:
+Bloqueios:
+
+- Blocked preenchido: 5/233.
+- Blocked = Yes: 1.
+- Blocked = No: 4.
+- Tipo de Bloqueio preenchido: 8/233.
+
+Tipos de bloqueio registrados:
+
+- Aguardando liberação de permissão via chamados: 3.
+- Dependência de fornecedor: 3.
+- Aguardando retorno do cliente: 2.
+
+Limites importantes:
 
 - Start Date tem cobertura muito baixa: 4/233.
 - Story Points nao possui cobertura.
@@ -165,6 +184,7 @@ Estados principais:
 - Em Discovery: 12.
 - Refinamento Tecnico: 11.
 - Product Backlog: 10.
+- Removed: 9.
 - Ready to Deploy: 6.
 
 Area Path principais:
@@ -193,22 +213,34 @@ Cobertura de datas:
 Bloqueios:
 
 - Blocked preenchido: 713/5172.
-- Blocked = Yes: 131 registros.
-- Blocked = No: 582 registros.
-- Tipo de Bloqueio: 188/5172.
+- Blocked = Yes: 131.
+- Blocked = No: 582.
+- Tipo de Bloqueio preenchido: 188/5172.
 
-Limite importante:
+Tipos de bloqueio mais frequentes:
+
+- Dependência de outra US/Feature: 49.
+- Aguardando validação de negócios: 43.
+- Fila: 33.
+- Dependência de fornecedor: 18.
+- Aguardando ação da infra/segurança: 16.
+- Aguardando definição de negócios: 13.
+- Priorização: 8.
+- Aguardando retorno do cliente: 4.
+- VPN: 4.
+
+Limites importantes:
 
 - Start Date tem baixa cobertura: 65/5172. Cycle time baseado em Start Date deve ser usado com muita cautela.
 - Story Points tem baixa cobertura: 207/5172.
 - Tipo de Bloqueio tem baixa cobertura: 188/5172.
-- A base parece ser snapshot/extração de work items atuais, nao historico completo de transicoes.
+- A base parece ser snapshot/exportacao de work items, nao historico completo de transicoes.
 
 Uso recomendado:
 
 - Throughput por Closed Date.
 - Lead time aproximado Created Date -> Closed Date.
-- Tempo Resolved -> Closed como proxy de fila final ou intervalo ate fechamento, quando ambas datas existirem.
+- Tempo Resolved -> Closed como proxy de fila final ou intervalo ate fechamento, quando ambas as datas existirem.
 - Analise de bloqueios por Blocked e Tipo de Bloqueio, com ressalva de cobertura.
 - Distribuicao por Area Path, Iteration Path, Work Item Type e State.
 - Leitura de itens em QA, Ready to Deploy, Deployed, Desenvolvimento, New e Closed.
@@ -244,8 +276,8 @@ Estados principais:
 - Desenvolvimento: 22.
 - Deployed: 14.
 - Em execucao: 3.
-- Alinhamento Estrategico: 2.
 - Em Desenvolvimento: 2.
+- Alinhamento Estrategico: 2.
 - Em Andamento: 1.
 - Removed: 1.
 - Feature Validation: 1.
@@ -264,7 +296,7 @@ Hierarquia identificada:
 - `Roubo de Credenciais` aparece como iniciativa.
 - `Monitoramento de Atipicidades | Fraude` aparece como iniciativa.
 
-Epicos / frentes identificadas em Roubo de Credenciais:
+Epicos/frentes identificadas em Roubo de Credenciais:
 
 - Geracao de Alertas, Tratamento e Evidencias.
 - Bloqueio de Acessos atraves de ferramentas Automatizados (Captcha).
@@ -275,7 +307,7 @@ Frentes identificadas em Monitoramento de Atipicidades:
 - Clientes com dados cadastrais compartilhados.
 - Controle de Operacoes de mesma origem.
 
-Limite importante:
+Limites importantes:
 
 - A base possui hierarquia de titulos (`Title 1` a `Title 5`), mas nao possui Area Path nem campos de bloqueio detalhados.
 - Start Date tem cobertura parcial: 12/91.
@@ -283,7 +315,7 @@ Limite importante:
 
 Uso recomendado:
 
-- Situacao atual por iniciativa.
+- Situacao por iniciativa.
 - Contagem por Work Item Type.
 - Contagem por State.
 - Analise de Closed, Deployed, Desenvolvimento e demais status.
