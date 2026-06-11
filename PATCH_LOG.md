@@ -2,6 +2,42 @@
 
 Registro de evolução da aplicação Galápagos do método Grimório.
 
+## 2026-06-11
+
+### Adicionado
+
+- Memória operacional reconstruída do MAM — Modelo de Avaliação de Maturidade Ágil Galápagos.
+- Memória operacional reconstruída dos diagnósticos de iniciativas passadas, incluindo referência à iniciativa de cadastro de device e à segunda iniciativa ainda pendente de levantamento completo.
+- Arquivo de controle para orientar a IA sobre como interpretar o pacote de memória sem copiar literalmente o conteúdo em materiais humanos.
+
+### Arquivos adicionados nesta rodada
+
+- `10_historico_aprendizados/2026-06-11_mam_e_diagnosticos_memoria_ia.md`
+- `07_entregaveis/mam_galapagos_v1_memoria_ia.md`
+- `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`
+
+### Atualizado
+
+- `01_INDICE.md` passou a listar explicitamente a memória do MAM, a memória de diagnósticos e o arquivo de controle em histórico/aprendizados.
+- `02_ROTAS.md` passou a incluir orientação explícita para:
+  - avaliar maturidade / MAM;
+  - consultar métricas no contexto do MAM;
+  - diagnosticar iniciativas passadas;
+  - lembrar que novos conteúdos relevantes devem atualizar índice, rotas e patch log.
+
+### Decisões
+
+- Os novos arquivos foram escritos em linguagem operacional para IA, não em linguagem final para publicação.
+- A IA deve usar estes materiais como memória interpretativa e reescrever em linguagem humana quando gerar relatórios, apresentações, mapas mentais ou comunicações executivas.
+- O MAM deve ser tratado como mapa de evolução, não como ranking entre times.
+- Diagnósticos reconstruídos devem separar dado confirmado, memória, hipótese, interpretação, risco e recomendação.
+
+### Limites
+
+- Esta atualização não recupera automaticamente todos os números, prints ou documentos finais dos chats originais.
+- O conteúdo representa memória estruturada e reconstruída para orientar respostas futuras.
+- Quando dados originais forem encontrados, devem ser adicionados como patch complementar, sem apagar esta base.
+
 ## 2026-06-02
 
 ### Adicionado
