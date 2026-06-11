@@ -85,6 +85,7 @@ Arquivos atuais:
 - `status_report.md`
 - `roadmap.md`
 - `diagnostico_de_maturidade.md`
+- `mam_galapagos_v1_memoria_ia.md` — memoria operacional do Modelo de Avaliacao de Maturidade Agil Galapagos. Usar como base de interpretacao, nao como texto final publicavel.
 
 ## Comunicacao
 
@@ -104,6 +105,10 @@ Pasta: `10_historico_aprendizados/`
 
 Uso: registrar decisoes, aprendizados, problemas recorrentes, backlog do Grimorio e evolucao do modelo.
 
+Arquivos atuais de memoria operacional:
+
+- `2026-06-11_mam_e_diagnosticos_memoria_ia.md` — registro de controle da memoria reconstruida sobre MAM e diagnosticos de iniciativas passadas.
+
 ## Documentos convertidos
 
 Pasta: `11_documentos_convertidos/`
@@ -120,6 +125,10 @@ Subpastas atuais:
 - `06_processos_politicas/`
 - `99_revisar_antes_de_publicar/`
 
+Arquivos atuais em diagnosticos:
+
+- `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md` — memoria operacional reconstruida sobre diagnosticos de iniciativas passadas, incluindo cadastro de device e segunda iniciativa pendente de levantamento.
+
 Regra: documentos convertidos devem indicar origem, data de conversao e status de revisao. Materiais sensiveis ou ainda nao revisados devem permanecer em `99_revisar_antes_de_publicar/`.
 
 ## Area de trabalho
@@ -131,3 +140,5 @@ Uso: guardar rascunhos e materiais ainda em preparacao. Nada nesta pasta deve se
 ## Regra geral
 
 Quando a pergunta envolver Galapagos, consultar primeiro `00_LEIA_PRIMEIRO.md`, depois usar este indice e `02_ROTAS.md` para escolher os arquivos corretos.
+
+Quando a pergunta envolver MAM, maturidade, avaliacao trimestral, perguntas por pilar, visual de resultado por time ou diagnostico de iniciativas passadas, consultar tambem os arquivos de memoria operacional adicionados em 2026-06-11. Esses arquivos sao base para interpretacao por IA e nao devem ser copiados literalmente em comunicacoes humanas.
