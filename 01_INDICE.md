@@ -69,6 +69,9 @@ Arquivos principais:
 
 - `metricas_principios_e_camadas.md`
 - `catalogo_metricas_operacionais.md`
+- `memoria_bases_azure_emulado_2026-06-11.md` — memoria das bases CSV usadas para emular Azure DevOps, com cobertura, limites e regras para lead time, cycle time, throughput, bloqueios, status e recortes por time/iniciativa.
+
+Regra: quando a pergunta envolver metricas com base nos CSVs enviados, consultar `memoria_bases_azure_emulado_2026-06-11.md` antes de responder.
 
 ## Evidencias
 
@@ -176,6 +179,8 @@ Uso: guardar rascunhos e materiais ainda em preparacao. Nada nesta pasta deve se
 Quando a pergunta envolver Galapagos, consultar primeiro `00_LEIA_PRIMEIRO.md`, depois usar este indice e `02_ROTAS.md` para escolher os arquivos corretos.
 
 Quando a pergunta envolver MAM, usar como fonte principal `07_entregaveis/mam_galapagos_modelo_validado_2026-06-11.md`.
+
+Quando a pergunta envolver metricas, fluxo, lead time, cycle time, throughput, bloqueios, status por time ou dados de Azure emulado, usar `05_metricas_e_dados/memoria_bases_azure_emulado_2026-06-11.md`.
 
 Quando a pergunta envolver Roubo de Credenciais ou Monitoramento de Atipicidades, usar como fonte principal `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md` e respeitar a hierarquia de fontes definida em `fontes_diagnostico_iniciativas_regulatorias_2026-06-11.md`.
 
