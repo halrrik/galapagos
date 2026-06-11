@@ -108,6 +108,7 @@ Uso: registrar decisoes, aprendizados, problemas recorrentes, backlog do Grimori
 Arquivos atuais de memoria operacional:
 
 - `2026-06-11_mam_e_diagnosticos_memoria_ia.md` — registro de controle da memoria reconstruida sobre MAM e diagnosticos de iniciativas passadas.
+- `2026-06-11_roteiro_validacao_gpt_claude_memoria_ia.md` — roteiro de validacao para testar MAM, diagnosticos, papeis, documentos convertidos e comportamento executivo em GPT corporativo, Claude ou outra IA.
 
 ## Documentos convertidos
 
@@ -131,6 +132,19 @@ Arquivos atuais em diagnosticos:
 
 Regra: documentos convertidos devem indicar origem, data de conversao e status de revisao. Materiais sensiveis ou ainda nao revisados devem permanecer em `99_revisar_antes_de_publicar/`.
 
+## Roteiros de validacao
+
+Usar `10_historico_aprendizados/2026-06-11_roteiro_validacao_gpt_claude_memoria_ia.md` quando o objetivo for testar se uma IA externa ou corporativa esta consultando o Grimorio corretamente.
+
+Esse roteiro cobre perguntas sobre:
+
+- MAM Galapagos;
+- diagnosticos de iniciativas passadas;
+- papeis e responsabilidades;
+- documentacao convertida/passada;
+- respostas executivas para gerente ou CTO;
+- limites quando faltarem dados factuais.
+
 ## Area de trabalho
 
 Pasta: `99_trabalho/`
@@ -142,3 +156,5 @@ Uso: guardar rascunhos e materiais ainda em preparacao. Nada nesta pasta deve se
 Quando a pergunta envolver Galapagos, consultar primeiro `00_LEIA_PRIMEIRO.md`, depois usar este indice e `02_ROTAS.md` para escolher os arquivos corretos.
 
 Quando a pergunta envolver MAM, maturidade, avaliacao trimestral, perguntas por pilar, visual de resultado por time ou diagnostico de iniciativas passadas, consultar tambem os arquivos de memoria operacional adicionados em 2026-06-11. Esses arquivos sao base para interpretacao por IA e nao devem ser copiados literalmente em comunicacoes humanas.
+
+Quando a pergunta envolver validacao em GPT corporativo, Claude ou outra IA, usar o roteiro de validacao para diferenciar problema de conteudo, problema de rota e problema de comportamento do modelo.
