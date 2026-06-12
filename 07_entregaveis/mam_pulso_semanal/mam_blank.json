@@ -1,0 +1,11 @@
+{
+  "report_name": "Pulso Semanal/Sprint",
+  "title": "MAM Galapagos - Pulso Semanal/Sprint",
+  "subtitle": "Entrega = User Story + Bug em Closed | Resolved -> Closed = Deploy Time",
+  "teams_per_page": 4,
+  "footer_left": "Leitura semanal = pulso operacional.\nA visao estrategica deve ser consolidada mensalmente.",
+  "footer_right": "Observacoes de base, times nao incluidos ou limitacoes do recorte.",
+  "executive_items": [],
+  "teams": [],
+  "details": []
+}
