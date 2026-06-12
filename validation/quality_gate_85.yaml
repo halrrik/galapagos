@@ -1,0 +1,59 @@
+quality_gate_85:
+  id: galapagos.validation.quality_gate_85
+  type: child_validation_contract
+  status: active
+  inherited_from: grimorio.validation.quality_gate_85
+  version: 0.1.0
+
+  minimum_score:
+    value: 85
+    scale: 100
+
+  principle:
+    - production_without_validation_is_process_failure
+    - validation_must_match_task_type
+    - validation_requires_required_inputs
+    - score_cannot_be_calculated_before_input_contract_is_satisfied
+    - galapagos_outputs_must_be_traceable_to_source_or_declared_limitation
+
+  required_flow:
+    - identify_task_type
+    - identify_required_inputs
+    - load_required_inputs
+    - confirm_input_contract
+    - identify_applicable_route
+    - identify_acceptance_criteria
+    - generate_candidate_output
+    - apply_blockers
+    - validate_against_task_matrix
+    - revise_if_score_below_threshold
+    - deliver_only_if_validated
+
+  fail_if:
+    - no_validation_performed
+    - input_contract_not_confirmed
+    - required_source_not_loaded
+    - evidence_claim_without_source_or_declared_limitation
+    - confidential_or_sensitive_data_used_without_clear_authorization
+    - score_calculated_before_required_inputs
+    - validation_matrix_missing_for_repetitive_task
+    - score_below_85
+    - output_validated_only_against_prompt_text
+    - output_is_marked_final_but_should_be_draft
+
+  allowed_below_threshold_delivery:
+    only_if_marked_as:
+      - draft
+      - diagnostic
+      - hypothesis
+      - unvalidated_attempt
+      - partial_work
+    must_disclose_when_relevant:
+      - missing_inputs
+      - validation_not_final
+      - next_required_input
+
+  performance_rule:
+    - do_not_load_full_validation_stack_for_casual_questions
+    - load_validation_stack_for_reports_templates_metrics_maturity_audits_and_final_outputs
+    - load_domain_sources_only_after_task_type_is_identified
