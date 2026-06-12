@@ -1,0 +1,41 @@
+validation_checks:
+  id: galapagos.validation.checks
+  type: validation_contract
+  status: active
+  inherited_from: grimorio.validation.checks
+  version: 0.1.0
+
+  required_checks:
+    - id_present
+    - type_present
+    - status_present
+    - version_present
+    - inheritance_declared_when_applicable
+    - scope_explicit
+    - quality_gate_declared_for_reusable_outputs
+    - input_contract_declared_before_scoring
+    - required_inputs_loaded_when_applicable
+    - applicable_galapagos_sources_loaded_when_domain_context_exists
+    - evidence_or_limitation_declared_for_factual_claims
+    - task_validation_matrix_selected_when_applicable
+    - acceptance_criteria_declared_when_task_has_quality_threshold
+
+  fail_if:
+    - final_output_without_quality_gate_when_required
+    - final_output_without_input_contract_when_required
+    - score_calculated_before_required_inputs
+    - output_validated_only_against_prompt_text
+    - required_source_not_loaded
+    - evidence_claim_without_source_or_declared_limitation
+    - protected_data_used_without_clear_authorization
+    - draft_presented_as_final
+
+  pass_criteria:
+    - machine_can_identify_applicable_rules_fast
+    - machine_can_identify_galapagos_context
+    - machine_can_identify_required_inputs_before_scoring
+    - machine_can_confirm_input_contract_before_validation
+    - machine_can_block_output_when_required_inputs_are_missing
+    - machine_can_separate_fact_evidence_hypothesis_interpretation_risk_recommendation
+    - machine_can_select_validation_matrix_by_task_type
+    - machine_can_block_or_revise_output_below_threshold
