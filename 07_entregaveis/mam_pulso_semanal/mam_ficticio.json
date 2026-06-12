@@ -1,0 +1,123 @@
+{
+  "report_name": "Pulso Semanal/Sprint",
+  "title": "MAM Galapagos - Pulso Semanal/Sprint",
+  "subtitle": "Entrega = User Story + Bug em Closed | Resolved -> Closed = Deploy Time",
+  "teams_per_page": 4,
+  "footer_left": "Leitura semanal = pulso operacional.\nA visao estrategica deve ser consolidada mensalmente.",
+  "footer_right": "System Team nao incluido nesta rodada por indisponibilidade de base.",
+  "executive_items": [
+    "Engenharia 01 entra em nivel Inicial: baixa entrega, 27 transbordos e estoque envelhecido de bloqueios.",
+    "Engenharia 02 apresenta a melhor conversao de entrega entre os times analisados.",
+    "Dados e Automacao exigem atencao por nao terem fechado User Story/Bug no periodo."
+  ],
+  "teams": [
+    {
+      "name": "Engenharia 01",
+      "score": 28.2,
+      "classification": "Inicial",
+      "critical": true,
+      "metrics": [
+        ["Entregue", "2 / 29"],
+        ["Eficiencia", "6,9%"],
+        ["Transbordos", "27"],
+        ["Em etapa final", "16"],
+        ["Tasks fechadas", "5 / 6"],
+        ["Aging critico", "57,6 dias"],
+        ["Bloqueios", "21 + 24 blockers"]
+      ],
+      "insight": "27 transbordos, baixa conversao e estoque envelhecido de bloqueios pressionam fortemente a nota."
+    },
+    {
+      "name": "Engenharia 02",
+      "score": 62.4,
+      "classification": "Gerenciado",
+      "critical": false,
+      "metrics": [
+        ["Entregue", "5 / 13"],
+        ["Eficiencia", "38,5%"],
+        ["Transbordos", "8"],
+        ["Atraso", "5 itens"],
+        ["Bloqueios", "3"],
+        ["Blockers", "3"],
+        ["Deploy Time", "7,0 dias"]
+      ],
+      "insight": "Melhor conversao de entrega do recorte, ainda com envelhecimento de itens abertos."
+    },
+    {
+      "name": "Time de Dados",
+      "score": 54.6,
+      "classification": "Parcialmente estruturado",
+      "critical": false,
+      "metrics": [
+        ["Entregue", "0 / 19"],
+        ["Eficiencia", "0,0%"],
+        ["Transbordos", "19"],
+        ["Atraso", "12 itens"],
+        ["Aging mediano", "9,4 dias"],
+        ["Bloqueios", "0"]
+      ],
+      "insight": "Sem fechamento de User Story ou Bug no periodo; exige validacao do criterio de conclusao."
+    },
+    {
+      "name": "Time de Automacao",
+      "score": 57.5,
+      "classification": "Parcialmente estruturado",
+      "critical": false,
+      "metrics": [
+        ["Entregue", "0 / 3"],
+        ["Eficiencia", "0,0%"],
+        ["Transbordos", "3"],
+        ["Atraso", "0 itens"],
+        ["Aging mediano", "5,5 dias"],
+        ["Blockers", "1"]
+      ],
+      "insight": "Amostra pequena e fluxo ainda em estabilizacao; leitura deve ser feita com cautela."
+    }
+  ],
+  "details": [
+    {
+      "name": "Engenharia 01",
+      "score": 28.2,
+      "classification": "Inicial",
+      "critical": true,
+      "summary_metrics": [
+        ["Planejado US/Bug", "29"],
+        ["Entregue US/Bug", "2"],
+        ["Eficiencia", "6,9%"],
+        ["Transbordos", "27"],
+        ["Em etapa final", "16"],
+        ["Tasks filhas fechadas", "5 / 6"]
+      ],
+      "aging_metrics": [
+        ["Demandas bloqueadas fora da sprint", "21"],
+        ["Blockers fora da sprint", "24"],
+        ["Aging mediano das demandas", "23,4 dias"],
+        ["Aging mediano dos blockers", "30,3 dias"],
+        ["Maior aging de blocker", "148,7 dias"],
+        ["Aging critico em item aberto", "57,6 dias"]
+      ],
+      "aging_interpretation": "O volume e a idade dos bloqueios indicam contaminacao do fluxo e perda de previsibilidade.",
+      "block_reasons": [
+        ["Dependencia de outras USs / feature", 13],
+        ["Desenvolvimento / backend pendente", 6],
+        ["Infra / ambiente / suporte externo", 4],
+        ["Dependencia de deploy", 1]
+      ],
+      "block_note": "Predomina dependencia entre historias e pendencias tecnicas ainda nao resolvidas.",
+      "executive_reading": [
+        "A sprint teve baixa conversao: apenas 2 de 29 User Stories/Bugs foram fechados.",
+        "Os 27 transbordos pesam contra previsibilidade e confiabilidade do planejamento.",
+        "Ha acumulo relevante de trabalho parado fora da sprint, com blockers antigos.",
+        "Tasks filhas fechadas nao se converteram em fechamento de historias, indicando fragmentacao."
+      ],
+      "actions": [
+        "Priorizar fechamento de User Stories/Bugs ja em fase final antes de abrir novas frentes.",
+        "Atacar blockers antigos com ritual especifico de desbloqueio.",
+        "Separar claramente fila de homologacao/deploy do restante do fluxo.",
+        "Revisar decomposicao e dependencias entre historias de uma mesma feature.",
+        "Limpar estoque fora da sprint para reduzir aging e melhorar previsibilidade."
+      ],
+      "footer_note": "Nota MAM influenciada fortemente por transbordos, aging e bloqueios fora da sprint."
+    }
+  ]
+}
