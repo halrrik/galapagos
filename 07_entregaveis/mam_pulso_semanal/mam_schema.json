@@ -1,0 +1,34 @@
+{
+  "name": "MAM Galapagos Pulso Semanal/Sprint",
+  "version": "2.0",
+  "teams_per_page": 4,
+  "rules": [
+    "Entrega de sprint considera apenas User Story e Bug em Closed.",
+    "Task, Bug Task e Blocker entram como evidencia de fluxo e bloqueio, nao como entrega final.",
+    "Resolved to Closed deve ser tratado como Deploy Time.",
+    "A visao global deve ter no maximo 4 times por pagina.",
+    "Textos longos devem ser reduzidos para evitar sobreposicao visual."
+  ],
+  "team_fields": [
+    "name",
+    "score",
+    "classification",
+    "critical",
+    "metrics",
+    "insight"
+  ],
+  "detail_fields": [
+    "name",
+    "score",
+    "classification",
+    "critical",
+    "summary_metrics",
+    "aging_metrics",
+    "aging_interpretation",
+    "block_reasons",
+    "block_note",
+    "executive_reading",
+    "actions",
+    "footer_note"
+  ]
+}
