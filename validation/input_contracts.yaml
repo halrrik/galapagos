@@ -1,0 +1,98 @@
+input_contracts:
+  id: galapagos.validation.input_contracts
+  type: input_contract_registry
+  status: active
+  inherited_from: grimorio.validation.input_contracts
+  version: 0.1.0
+
+  principle:
+    - validation_requires_required_inputs
+    - missing_required_input_blocks_final_output
+    - score_cannot_be_calculated_before_input_contract_is_satisfied
+    - output_validated_only_against_user_prompt_is_not_validated_output
+    - galapagos_outputs_must_separate_fact_evidence_hypothesis_interpretation_risk_recommendation
+
+  rule:
+    summary: "Antes de calcular nota 85+ ou entregar relatorio Galapagos como final, a IA deve identificar e carregar os insumos obrigatorios da tarefa."
+    short_form: "Sem fontes obrigatorias carregadas, nao existe validacao. Sem validacao completa, nao existe nota 85. Sem nota 85, nao existe entrega final."
+
+  generic_required_inputs:
+    - task_type
+    - user_goal
+    - audience
+    - acceptance_criteria
+    - constraints
+    - output_format
+    - available_evidence
+    - data_sensitivity_check
+
+  domain_required_inputs:
+    when_galapagos_context_exists:
+      - 00_LEIA_PRIMEIRO.md
+      - 01_INDICE.md
+      - 02_ROTAS.md
+      - applicable_domain_files
+      - governance_or_compliance_rules_when_data_is_sensitive
+      - evidence_or_declared_limitation
+      - deliverable_model_when_output_is_report_or_template
+
+  task_examples:
+    visual_report_template:
+      required_inputs:
+        - template_source_image_or_svg_or_html
+        - target_output_size
+        - data_fields_to_fill
+        - audience
+        - visual_hierarchy
+        - brand_or_style_constraints
+        - export_format
+      blocker_if_missing:
+        - template_source_image_or_svg_or_html
+        - data_fields_to_fill
+        - output_format
+    metric_report:
+      required_inputs:
+        - metric_definition
+        - formula
+        - data_source_or_declared_simulation
+        - period
+        - team_or_scope
+        - interpretation_goal
+      blocker_if_missing:
+        - formula
+        - data_source_or_declared_simulation
+    executive_status:
+      required_inputs:
+        - initiative_or_team_scope
+        - current_status
+        - evidence_or_limitation
+        - risks
+        - next_actions
+        - audience
+    maturity_diagnosis:
+      required_inputs:
+        - mam_source
+        - evaluated_scope
+        - evidence
+        - scoring_or_assessment_basis
+        - interpretation_goal
+
+  fail_if:
+    - required_source_not_loaded
+    - evidence_claim_without_source_or_declared_limitation
+    - score_calculated_before_required_inputs
+    - output_validated_only_against_prompt_text
+    - confidential_or_sensitive_data_used_without_clear_authorization
+    - final_output_delivered_with_unresolved_required_input
+
+  allowed_exception:
+    only_if_marked_as:
+      - draft
+      - hypothesis
+      - diagnostic
+      - unvalidated_attempt
+      - partial_work
+    must_disclose:
+      - missing_inputs
+      - validation_not_final
+      - next_required_input
