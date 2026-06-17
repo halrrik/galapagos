@@ -1,0 +1,406 @@
+{
+  "template_id": "galapagos_status_report_squads",
+  "template_name": "Status Report das Squads",
+  "canonical_version": "1.0",
+  "based_on_working_version": "v8_recontagem",
+  "created_on": "2026-06-17",
+  "owner_context": "Galapagos / Tecnologia / Acompanhamento operacional das squads",
+  "purpose": "Gerar uma capa executiva comparável por squad para validar com Jeremias e apoiar conversas com negócio, sem transformar a entrega em diagnóstico amplo.",
+  "language_contract": {
+    "primary_label": "Status Report",
+    "title": "Status Report das Squads",
+    "subtitle": "Cerimônias, prioridades, entrega e impedimentos",
+    "avoid_as_main_language": [
+      "diagnóstico",
+      "maturidade",
+      "DORA",
+      "lead time",
+      "cycle time",
+      "throughput",
+      "governança de IA",
+      "saúde do fluxo"
+    ],
+    "allowed_internal_concepts": [
+      "situação atual",
+      "priorização",
+      "entrega executiva",
+      "bloqueios",
+      "transbordo",
+      "demanda macro",
+      "rastreabilidade"
+    ]
+  },
+  "canvas": {
+    "format": "16:9 horizontal",
+    "render_size_px": {
+      "width": 3840,
+      "height": 2160
+    },
+    "preview_size_px": {
+      "width": 1920,
+      "height": 1080
+    },
+    "intended_use": "colar como slide inteiro em PowerPoint 16:9, não como imagem pequena dentro de outro layout"
+  },
+  "visual_identity": {
+    "style": "PPT executivo Galapagos: fundo branco, azul institucional, cards limpos, pouca ornamentação",
+    "colors_rgb": {
+      "background": [
+        255,
+        255,
+        255
+      ],
+      "primary_blue": [
+        13,
+        57,
+        118
+      ],
+      "secondary_blue": [
+        0,
+        126,
+        245
+      ],
+      "light_blue": [
+        235,
+        244,
+        255
+      ],
+      "mid_blue": [
+        210,
+        230,
+        250
+      ],
+      "border": [
+        204,
+        222,
+        239
+      ],
+      "text": [
+        38,
+        45,
+        55
+      ],
+      "muted": [
+        100,
+        114,
+        130
+      ],
+      "card_border": [
+        211,
+        224,
+        238
+      ],
+      "light_grey": [
+        247,
+        249,
+        252
+      ],
+      "box_grey": [
+        241,
+        244,
+        248
+      ],
+      "yellow": [
+        241,
+        164,
+        0
+      ],
+      "yellow_bg": [
+        255,
+        248,
+        231
+      ],
+      "green": [
+        0,
+        158,
+        96
+      ],
+      "green_bg": [
+        231,
+        247,
+        239
+      ],
+      "red": [
+        205,
+        59,
+        59
+      ],
+      "red_bg": [
+        255,
+        235,
+        235
+      ],
+      "gray": [
+        154,
+        169,
+        184
+      ],
+      "gray_bg": [
+        241,
+        245,
+        248
+      ]
+    },
+    "font_preference": "Usar fonte corporativa real da Galapagos quando disponível. Fallback técnico usado no protótipo: DejaVu Sans / Liberation Sans.",
+    "font_note": "A fonte ainda ficou pequena para PPT. Na próxima versão, aumentar principalmente corpo dos cards, Principal ponto de atenção, Próxima ação e rodapé em +1 a +1,5 ponto visual, se couber.",
+    "logo": {
+      "expected_asset": "galapagos_logo_blue.png",
+      "placement": "topo direito",
+      "fallback": "texto Galapagos em azul institucional"
+    }
+  },
+  "layout": {
+    "header": {
+      "title_position_px": [
+        130,
+        115
+      ],
+      "subtitle_position_px": [
+        130,
+        205
+      ],
+      "metadata_chip_y_px": 274,
+      "metadata_text": "Período analisado: últimos 7 dias corridos | Escopo operacional: demandas (User Stories/Bugs) | Base: Azure DevOps / Power BI"
+    },
+    "cards": {
+      "count": 5,
+      "order": [
+        "Engenharia 1",
+        "Engenharia 2",
+        "Automação",
+        "Dados",
+        "System Team"
+      ],
+      "top_px": 410,
+      "bottom_px": 1810,
+      "margin_px": 130,
+      "gap_px": 34,
+      "sections_order": [
+        "team_name",
+        "status_badge",
+        "demanda_macro_em_foco",
+        "cerimonias",
+        "prioridade",
+        "transbordo",
+        "planejado_ou_criado",
+        "fechado",
+        "bloqueios",
+        "principal_ponto_de_atencao",
+        "proxima_acao",
+        "criterio"
+      ]
+    },
+    "bottom_legend": {
+      "enabled": true,
+      "title": "Critério de leitura",
+      "items": [
+        {
+          "label": "Em dia",
+          "meaning": "operação controlada"
+        },
+        {
+          "label": "Atenção",
+          "meaning": "ponto relevante a acompanhar"
+        },
+        {
+          "label": "Ação necessária",
+          "meaning": "risco concreto para entrega ou alinhamento"
+        },
+        {
+          "label": "A definir",
+          "meaning": "dados insuficientes ou leitura não validada"
+        }
+      ]
+    },
+    "footer": {
+      "left": "GALAPAGOS - CONFIDENCIAL",
+      "center": "Fonte: Azure DevOps via Power BI | Is Current = situação atual | Contagem: somente User Story/Bug | Históricos usados apenas para movimentação",
+      "right": "1"
+    }
+  },
+  "card_schema": {
+    "squad": "Nome do time exibido no card.",
+    "status": "Em dia | Atenção | Ação necessária | A definir",
+    "demanda_macro_em_foco": "Demanda macro/iniciativa dominante em execução no período. Usar rastreabilidade quando possível; se não, inferir com ressalva por título/agrupamento.",
+    "cerimonias": "Sim | Parcial | Não | A definir. Pode usar observação de dailies e conversa com Jeremias.",
+    "prioridade": "Sim | Parcial | Não | A definir. Reflete clareza do que está em foco/priorizado.",
+    "transbordo": "Sim | Não | A definir. Manual nesta versão; indica risco de itens do período transbordarem para próximo ciclo.",
+    "planejado_ou_criado": "Para Engenharia 1, Engenharia 2, Automação e Dados exibir Planejado/Priorizado. Para System Team exibir Criado.",
+    "fechado": "Quantidade de User Stories/Bugs fechados no período.",
+    "bloqueios": "Quantidade de bloqueios atuais/ativos ou blockers abertos deduplicados, conforme arquivo disponível.",
+    "principal_ponto_de_atencao": "Frase curta, executiva, orientada à decisão. Não chamar de opinião.",
+    "proxima_acao": "Frase curta com ação operacional/gerencial concreta.",
+    "criterio": "Fechado = entrega executiva. Itens em deploy/homologação/resolved não contam como fechado."
+  },
+  "data_inputs": {
+    "preferred_format": [
+      "CSV",
+      "XLSX"
+    ],
+    "acceptable_split_files": [
+      "User Stories/Bugs atuais e movimentadas",
+      "Pais/hierarquia: Feature, Epic, Initiative",
+      "Blocked/impedimentos",
+      "exports por Board Column quando houver limitação do Power BI"
+    ],
+    "minimum_columns_for_work_items": [
+      "Work Item Id",
+      "Title",
+      "Work Item Type",
+      "State",
+      "State Category",
+      "Board Column",
+      "Assigned To",
+      "Area Path",
+      "Iteration Path",
+      "Created Date",
+      "Changed Date",
+      "Resolved Date",
+      "Closed Date",
+      "Blocked",
+      "Parent Work Item Id",
+      "Is Current"
+    ],
+    "minimum_columns_for_blocked_items": [
+      "Work Item Id",
+      "Title",
+      "Work Item Type",
+      "State",
+      "Parent Work Item Id",
+      "Created Date",
+      "Changed Date",
+      "Closed Date",
+      "Tipo de bloqueio",
+      "Area Path",
+      "Is Current"
+    ],
+    "minimum_columns_for_hierarchy": [
+      "Work Item Id",
+      "Title",
+      "Work Item Type",
+      "Parent Work Item Id",
+      "Area Path",
+      "State",
+      "Is Current"
+    ],
+    "columns_to_avoid_if_noisy": [
+      "Tags",
+      "Description"
+    ],
+    "description_note": "Descrição pode entrar em versão futura para avaliar qualidade da escrita das histórias, mas não é necessária para a capa atual."
+  },
+  "processing_rules": {
+    "current_state": "Is Current = TRUE/Yes representa a situação atual real. Linhas históricas não devem ser contadas como estado atual.",
+    "history_usage": "Linhas históricas servem para entender movimentação, mudança de status, entrada em In Progress, tempo bloqueado e eventos do período.",
+    "countable_work_item_types": [
+      "User Story",
+      "Bug"
+    ],
+    "non_countable_for_metrics": [
+      "Task",
+      "Feature",
+      "Epic",
+      "Initiative",
+      "Blocked",
+      "Blocker"
+    ],
+    "period_label": "últimos 7 dias corridos",
+    "technical_extraction_window": "usar até 8 dias quando necessário para evitar perda por horário/corte",
+    "hierarchy_trace": "Subir por Parent Work Item Id: User Story/Bug -> Feature -> Epic -> Initiative. A demanda macro em foco deve ser a Initiative dominante quando rastreável.",
+    "area_path_warning": "Nem todo Area Path representa squad. Alguns representam portfólio/regulatório. Usar mapa manual de Area Path válido por squad.",
+    "closed_rule": "Fechado conta somente User Story/Bug com Closed Date no período ou estado atual Closed quando aplicável ao corte. Para liderança, só Closed conta como entrega executiva.",
+    "resolved_deploy_rule": "Resolved/Waiting to Deploy/Homologação representam etapa de entrega ou fila de entrega, mas não contam como Fechado.",
+    "blocked_rule": "Itens do tipo Blocked/Blocker em nível de task podem medir impedimento. Enquanto abertos, bloqueio ativo. Quando fechados, usar Created/Closed para dias bloqueados e Tipo de bloqueio para ofensores. Não entram na contagem de demandas."
+  },
+  "squad_count_rules": {
+    "Engenharia 1": {
+      "metric_label": "Planejado",
+      "count_types": [
+        "User Story",
+        "Bug"
+      ],
+      "current_only_for_state": true,
+      "planned_criteria": "Contar itens atuais na iteration mais recente/confiável do time com status mínimo de Backlog ou que entraram em In Progress. Excluir New, Refinamento Técnico, Refinamento de Negócio e Product Backlog.",
+      "notes": "Se houver Iteration Path, usar a mais recente. Status de New/refinamento não conta como planejado."
+    },
+    "Engenharia 2": {
+      "metric_label": "Planejado",
+      "count_types": [
+        "User Story",
+        "Bug"
+      ],
+      "current_only_for_state": true,
+      "planned_criteria": "Mesmo critério de Engenharia 1: status mínimo de Backlog ou entrada em In Progress. Excluir New/refinamentos/Product Backlog. Quando Iteration Path não for confiável, usar proxy temporário explícito.",
+      "notes": "Pode exigir armengue temporal quando o time não usa sprint/iteration corretamente."
+    },
+    "Automação": {
+      "metric_label": "Planejado",
+      "count_types": [
+        "User Story",
+        "Bug"
+      ],
+      "current_only_for_state": true,
+      "planned_criteria": "Contar itens atuais com status mínimo de Backlog ou entrada em In Progress. Excluir New/refinamentos/Product Backlog. Usar Iteration Path quando houver sprint ativa confiável.",
+      "notes": "Cerimônias funcionam, mas acompanhar qualidade da quebra/escrita das histórias futuramente."
+    },
+    "Dados": {
+      "metric_label": "Planejado",
+      "count_types": [
+        "User Story",
+        "Bug"
+      ],
+      "current_only_for_state": true,
+      "planned_criteria": "Usar Iteration Path vigente do time. Para o corte validado, Dados deveria ter 18 itens: 16 Active + 2 Backlog. New não entra.",
+      "notes": "Se número divergir de 18 no mesmo corte, revisar arquivo/filtro antes de gerar slide."
+    },
+    "System Team": {
+      "metric_label": "Criado",
+      "count_types": [
+        "User Story",
+        "Bug"
+      ],
+      "current_only_for_state": true,
+      "planned_criteria": "Como sustentação, desde a criação a demanda inicia relógio/contador. Exibir Criado no lugar de Planejado. Contar demandas abertas/criadas para atendimento, apenas User Story/Bug.",
+      "notes": "Separar sustentação/GLPI/incidentes/demandas planejadas quando possível."
+    }
+  },
+  "status_rules": {
+    "Em dia": "Cerimônias funcionam, prioridades claras, entregas fechando, sem bloqueio crítico.",
+    "Atenção": "Existe problema relevante, mas controlável: daily longa, planejamento acima da entrega, bloqueio moderado, histórias pouco claras ou dependência controlável.",
+    "Ação necessária": "Risco real para entrega: bloqueios relevantes, baixa entrega frente ao planejado, dependência externa forte, falta de informação para negócio ou time sem atividade bem direcionada.",
+    "A definir": "Dados insuficientes ou leitura ainda não validada."
+  },
+  "manual_fields": {
+    "cerimonias": "Manual/observacional por enquanto, baseado em dailies e conversa com Jeremias.",
+    "prioridade": "Parcialmente manual: dados ajudam, mas interpretação depende de clareza do board e conversa.",
+    "risco_de_transbordo": "Manual nesta versão. Futuramente pode combinar fechado vs planejado, dias restantes, bloqueios, itens em etapa final e dependências.",
+    "principal_ponto_de_atencao": "Gerado por leitura dos dados + contexto da conversa; validar antes de envio executivo.",
+    "proxima_acao": "Gerado por leitura dos dados + contexto da conversa; deve ser curta e acionável."
+  },
+  "known_limitations": [
+    "Exportações do Power BI podem vir agregadas e sem Work Item Id/Parent real; nesse caso não há rastreabilidade segura até Initiative.",
+    "Quando dados vierem divididos por status/coluna, deduplicar por Work Item Id real. Se só houver contagem agregada, não deduplicar artificialmente.",
+    "Fonte pode ficar pequena ao colar no PPT; preferir exportar como slide inteiro ou migrar para PPT editável futuramente.",
+    "Area Path precisa de mapa manual porque pode representar squad ou portfólio."
+  ],
+  "last_validated_numbers_example": {
+    "Dados": "18 planejados no corte validado: 16 Active + 2 Backlog, somente User Story/Bug, iteration vigente, New excluído",
+    "Engenharia_1": "Contagem anterior 61 foi considerada inflada; regra corrigida exclui histórico e tipos/status indevidos",
+    "System_Team": "Usar Criado em vez de Planejado"
+  },
+  "files_from_session": {
+    "latest_image_high_resolution": "status_report_squads_dados_v8_recontagem.png",
+    "latest_image_preview": "status_report_squads_dados_v8_recontagem_preview.png",
+    "prototype_script": "generate_status_report_v8_recontagem.py"
+  },
+  "next_run_checklist": [
+    "Receber CSV/XLSX com Work Item Id real e Parent Work Item Id real sempre que possível.",
+    "Confirmar mapa de Area Path -> Squad antes de contar.",
+    "Filtrar situação atual com Is Current = TRUE/Yes para contagens atuais.",
+    "Contar apenas User Story e Bug para Planejado/Criado/Fechado.",
+    "Aplicar regra específica por squad antes de gerar números.",
+    "Validar Dados: se mesmo corte/iteration, esperado 18 = 16 Active + 2 Backlog.",
+    "Gerar imagem 16:9 em alta resolução e preview.",
+    "Antes de finalizar, conferir legibilidade da fonte no preview e, se necessário, aumentar corpo em +1/+1,5."
+  ]
+}
