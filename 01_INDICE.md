@@ -9,17 +9,20 @@ Este indice mostra onde procurar cada tipo de informacao dentro da aplicacao Gal
 - `PATCH_LOG.md` — historico de mudancas, decisoes e pendencias.
 - `AVISO_DE_PROPRIEDADE.md` — separacao entre metodo Grimorio, aplicacao Galapagos e materiais internos.
 
-## Regras de resposta
+## Regras de resposta e operacao
 
 Pasta: `00_regras_resposta/`
 
-Uso: orientar como responder quando a informacao existe de forma completa, parcial, derivada ou inexistente no Grimorio.
+Uso: orientar como responder quando a informacao existe de forma completa, parcial, derivada ou inexistente no Grimorio, e como validar incorporacao de mudancas no repositorio Galapagos.
 
 Arquivos principais:
 
 - `escada_de_resposta_e_uso_de_memoria_2026-06-11.md` — regra operacional para evitar falso negativo. A resposta nao deve ser binaria entre documento oficial completo e ausencia total. Deve classificar o nivel de sustentacao: fonte direta, consolidacao de fontes, leitura derivada, framework aplicavel ou lacuna real.
+- `protocolo_validar_comitar_auditar_limpar.md` — protocolo local para documentar, comitar, validar, auditar e limpar mudancas no Grimorio Galapagos, evitando arquivos nao encontraveis e memoria morta.
 
 Regra: antes de responder que nao ha informacao suficiente, verificar se existe material relacionado que permita resposta consolidada ou derivada com limite declarado.
+
+Regra: antes de considerar uma mudanca incorporada ao Grimorio Galapagos, verificar se ela esta encontravel por entrada, indice, rota, README, patch log ou outro mecanismo de recuperacao.
 
 ## Pacotes consolidados para IA externa
 
@@ -115,6 +118,19 @@ Arquivos atuais:
 
 Regra: quando houver divergencia sobre pilares, escala, fontes de avaliacao ou estrutura do MAM, usar `mam_galapagos_modelo_validado_2026-06-11.md` como fonte principal.
 
+## Templates operacionais
+
+Pasta: `templates/`
+
+Uso: guardar contratos de templates reutilizaveis que devem ser consultados antes de gerar materiais recorrentes.
+
+Arquivos principais:
+
+- `templates/status-report-squads/status_report_squads_template_definition_v1.md` — definicao operacional do template de Status Report semanal das Squads.
+- `templates/status-report-squads/status_report_squads_template_definition_v1.json` — contrato estruturado do template de Status Report semanal das Squads.
+
+Regra: quando o pedido envolver Status Report semanal das Squads, todos os times juntos, imagem unica com squads, cerimonias, prioridades, entrega e impedimentos, usar a Rota 4.1 em `02_ROTAS.md` antes de gerar qualquer imagem final.
+
 ## Comunicacao
 
 Pasta: `08_comunicacao/`
@@ -198,6 +214,8 @@ Quando a pergunta envolver resposta parcial, memoria derivada, papel sem matriz 
 
 Quando a pergunta envolver MAM, usar como fonte principal `07_entregaveis/mam_galapagos_modelo_validado_2026-06-11.md`.
 
+Quando a pergunta envolver Status Report semanal das Squads, todos os times juntos, imagem unica com squads, cerimonias, prioridades, entrega e impedimentos, usar `templates/status-report-squads/status_report_squads_template_definition_v1.md`, `templates/status-report-squads/status_report_squads_template_definition_v1.json` e a Rota 4.1 em `02_ROTAS.md`.
+
 Quando a pergunta envolver metricas, fluxo, lead time, cycle time, throughput, bloqueios, status por time ou dados de Azure emulado, usar `05_metricas_e_dados/memoria_bases_azure_emulado_2026-06-11.md`.
 
 Quando a pergunta envolver Roubo de Credenciais ou Monitoramento de Atipicidades, usar como fonte principal `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md` e respeitar a hierarquia de fontes definida em `fontes_diagnostico_iniciativas_regulatorias_2026-06-11.md`.
@@ -207,3 +225,5 @@ Quando a pergunta envolver futuro do Grimorio, visao de chegada, memoria viva, c
 Quando a pergunta envolver validacao em GPT corporativo, Claude ou outra IA, usar o roteiro de validacao para diferenciar problema de conteudo, problema de rota e problema de comportamento do modelo.
 
 Quando Claude/GPT demonstrar leitura inconsistente de ZIP ou repositorio, priorizar `galapagos_universal_context_prompt_2026-06-11.md` junto dos arquivos reais do Grimorio para teste honesto de roteamento.
+
+Quando a pergunta envolver validar, comitar, auditar, limpar ou verificar incorporacao operacional de mudanca no repositorio Galapagos, usar `00_regras_resposta/protocolo_validar_comitar_auditar_limpar.md` e a Rota 10 em `02_ROTAS.md`.
