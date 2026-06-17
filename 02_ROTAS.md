@@ -123,6 +123,40 @@ Saida esperada:
 - riscos;
 - proximas acoes.
 
+### Rota 4.1 — Status Report semanal das Squads
+
+Quando usar:
+
+- status report semanal das squads;
+- status report com todos os times juntos;
+- pedido de imagem unica com todos os times;
+- acompanhamento de cerimonias, prioridades, entrega e impedimentos;
+- comparativo executivo por squad.
+
+Consultar nesta ordem:
+
+1. `00_LEIA_PRIMEIRO.md`
+2. `templates/status-report-squads/status_report_squads_template_definition_v1.md`
+3. `templates/status-report-squads/status_report_squads_template_definition_v1.json`
+4. `00_regras_resposta/protocolo_validar_comitar_auditar_limpar.md`
+5. `05_metricas_e_dados/memoria_bases_azure_emulado_2026-06-11.md`, se a execucao envolver CSVs, Azure emulado ou contagens por squad
+6. arquivos de dados fornecidos pelo usuario
+
+Regra especifica:
+
+- Nao substituir este template por dashboard executivo generico.
+- Interpretar "todos os times juntos" como cards comparaveis por squad em uma unica pagina.
+- Antes de gerar imagem final, apresentar previa textual auditada das contagens e leituras por squad.
+- Se a previa textual tiver divergencia, corrigir antes da imagem.
+- Se os dados nao permitirem contagem confiavel, declarar limitacao e nao tratar a imagem como validada.
+
+Saida esperada:
+
+- auditoria dos arquivos recebidos;
+- previa textual das contagens por squad;
+- indicacao de proxies ou limitacoes;
+- somente depois, imagem final quando liberada.
+
 ## Rota 5 — Criar relatorio periodico
 
 Quando usar:
@@ -268,162 +302,36 @@ Consultar:
 
 Saida esperada:
 
-- recomendacao prudente;
-- limites claros;
-- separacao entre publico, privado e corporativo;
-- diferenciar visao estrategica de compromisso de MVP.
+- limite claro;
+- fonte permitida;
+- o que pode ou nao ser usado;
+- proxima acao segura.
 
-## Rota 10 — Consultar documentos convertidos
+## Rota 10 — Validar, comitar, auditar ou limpar Grimorio Galapagos
 
 Quando usar:
 
-- consultar um documento que veio de Word, PDF, apresentacao ou material consolidado;
-- resumir documento convertido;
-- comparar documento convertido com modelo operacional;
-- usar documento convertido como fonte de contexto;
-- decidir para qual pasta um documento convertido deve ir.
+- validar ultimo commit;
+- auditar repositorio;
+- limpar redundancia;
+- verificar se arquivo novo ficou encontravel;
+- checar se indice, rotas e patch log foram atualizados;
+- revisar incorporacao operacional de template, regra, decisao ou aprendizado.
 
 Consultar:
 
 1. `00_LEIA_PRIMEIRO.md`
-2. `11_documentos_convertidos/README.md`
-3. Subpasta correspondente ao tema:
-   - `01_refinamento/`
-   - `02_papeis_responsabilidades/`
-   - `03_transformacao_agil/`
-   - `04_roadmap_planejamento/`
-   - `05_diagnosticos/`
-   - `06_processos_politicas/`
-   - `99_revisar_antes_de_publicar/`
-4. `09_governanca_compliance/README.md`, se houver risco de sensibilidade.
+2. `00_regras_resposta/protocolo_validar_comitar_auditar_limpar.md`
+3. `01_INDICE.md`
+4. `02_ROTAS.md`
+5. `PATCH_LOG.md`
+6. arquivos alterados ou criados
 
 Saida esperada:
 
-- origem do documento;
-- resumo ou leitura;
-- relacao com o Grimorio;
-- limites de uso;
-- indicacao se pode virar fonte oficial.
-
-## Rota 12 — Diagnosticar iniciativas passadas
-
-Quando usar:
-
-- pergunta sobre diagnosticos feitos anteriormente;
-- projeto de cadastro de device;
-- segunda iniciativa pendente de levantamento;
-- relatorio grafico e textual de iniciativa;
-- recuperacao de conclusoes, gargalos ou acoes discutidas em conversas anteriores.
-
-Consultar:
-
-1. `00_LEIA_PRIMEIRO.md`
-2. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md`, quando envolver Roubo de Credenciais ou Monitoramento de Atipicidades
-3. `11_documentos_convertidos/05_diagnosticos/fontes_diagnostico_iniciativas_regulatorias_2026-06-11.md`, para definir hierarquia de fontes
-4. `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_passadas_memoria_ia.md`
-5. `07_entregaveis/relatorio_periodico.md`
-6. `07_entregaveis/status_report.md`
-7. `05_metricas_e_dados/metricas_principios_e_camadas.md`
-8. `05_metricas_e_dados/catalogo_metricas_operacionais.md`
-9. `05_metricas_e_dados/memoria_bases_azure_emulado_2026-06-11.md`, quando a pergunta exigir dados operacionais
-10. Evidencias, prints, CSVs ou documentos fornecidos pelo usuario
-
-Saida esperada:
-
-- deixar claro o que e memoria reconstruida e o que e dado confirmado;
-- separar evidencia, interpretacao, hipotese, risco e recomendacao;
-- nao inventar numeros;
-- reconstruir relatorio humano apenas quando houver pedido explicito;
-- indicar limites quando os dados originais nao estiverem presentes.
-
-## Rota 13 — Validar uso em GPT corporativo, Claude ou IA externa
-
-Quando usar:
-
-- testar se o Grimorio funciona em outra IA;
-- preparar perguntas de validacao;
-- comparar resposta de GPT/Claude com a memoria do repositorio;
-- diagnosticar se uma resposta falhou por falta de dado, falta de rota ou comportamento do modelo;
-- validar MAM, papeis, documentacao passada ou diagnosticos.
-
-Consultar:
-
-1. `00_LEIA_PRIMEIRO.md`
-2. `01_INDICE.md`
-3. `02_ROTAS.md`
-4. `PATCH_LOG.md`
-5. `10_historico_aprendizados/2026-06-11_roteiro_validacao_gpt_claude_memoria_ia.md`
-6. Arquivos especificos da area testada:
-   - MAM: `07_entregaveis/mam_galapagos_modelo_validado_2026-06-11.md`
-   - Diagnosticos: `11_documentos_convertidos/05_diagnosticos/diagnostico_iniciativas_regulatorias_validado_2026-06-11.md`
-   - Metricas e dados: `05_metricas_e_dados/memoria_bases_azure_emulado_2026-06-11.md`
-   - Papeis: `11_documentos_convertidos/02_papeis_responsabilidades/README.md` e documentacao base
-   - Documentacao convertida: `11_documentos_convertidos/README.md`
-   - Visao de chegada: `10_historico_aprendizados/2026-06-11_visao_chegada_grimorio_contexto_vivo.md`
-
-Saida esperada:
-
-- roteiro de perguntas;
-- criterio de avaliacao;
-- resposta esperada ou sinais de resposta correta;
-- identificacao de lacuna;
-- recomendacao de patch quando necessario.
-
-## Rota 14 — Visao de chegada do Grimorio / contexto vivo conectado
-
-Quando usar:
-
-- discutir futuro do Grimorio;
-- explicar para onde o Grimorio deve evoluir;
-- falar de memoria viva;
-- conectar reunioes, Azure, Kiro, documentos, produto, codigo, repositorios, skills ou agentes;
-- diferenciar visao estrategica de MVP;
-- preparar conversa com CTO, gerente ou lideranca sobre conectores;
-- discutir viabilidade, governanca e proximos passos para evolucao.
-
-Consultar:
-
-1. `00_LEIA_PRIMEIRO.md`
-2. `01_INDICE.md`
-3. `09_governanca_compliance/README.md`, quando envolver acesso, permissao ou dados sensiveis
-4. `10_historico_aprendizados/2026-06-11_visao_chegada_grimorio_contexto_vivo.md`
-5. `05_metricas_e_dados/memoria_bases_azure_emulado_2026-06-11.md`, quando a visao envolver Azure e metricas
-6. Documentos ou evidencias relacionados ao conector/fonte discutida
-
-Saida esperada:
-
-- deixar claro que e visao de chegada, nao escopo fechado de MVP;
-- explicar valor esperado;
-- separar capacidade desejada de capacidade ja existente;
-- apontar dependencias de governanca, conectores, permissoes e fontes oficiais;
-- propor evolucao incremental;
-- evitar prometer automacao total imediata.
-
-## Rota 11 — Atualizar o Grimorio
-
-Quando usar:
-
-- adicionar novo documento;
-- criar novo modelo;
-- ajustar estrutura;
-- registrar aprendizado.
-
-Consultar:
-
-1. `PATCH_LOG.md`
-2. `01_INDICE.md`
-3. `02_ROTAS.md`
-4. `10_historico_aprendizados/README.md`
-5. `11_documentos_convertidos/README.md`, se a atualizacao envolver documentos convertidos
-
-Saida esperada:
-
-- arquivo correto;
-- pasta correta;
-- classificacao de sensibilidade;
-- atualizacao do patch log;
-- ajuste do indice/rotas quando necessario.
-
-Regra chave:
-
-Sempre que novo conteudo relevante for adicionado ao Grimorio, verificar se `01_INDICE.md`, `02_ROTAS.md` e `PATCH_LOG.md` precisam ser atualizados. Se o conteudo criar uma nova forma de consulta, atualizar rotas. Se apenas adicionar material dentro de rota existente, atualizar indice e patch log.
+- status: OK, OK com avisos, Falhou ou Bloqueado;
+- arquivos alterados;
+- caminho de recuperacao;
+- checks aprovados;
+- problemas encontrados;
+- pendencias de auditoria ou limpeza.
