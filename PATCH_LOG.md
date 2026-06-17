@@ -2,6 +2,37 @@
 
 Registro de evolução da aplicação Galápagos do método Grimório.
 
+## 2026-06-17 — Status Report das Squads e protocolo de incorporação
+
+### Adicionado
+
+- Protocolo local para documentar, comitar, validar, auditar e limpar mudanças no Grimório Galápagos.
+- Rota específica para Status Report semanal das Squads.
+- Mapeamento explícito do template de Status Report das Squads no índice.
+
+### Arquivos adicionados nesta rodada
+
+- `00_regras_resposta/protocolo_validar_comitar_auditar_limpar.md`
+
+### Atualizado
+
+- `01_INDICE.md` passou a listar o protocolo local de validação/comit/auditoria/limpeza.
+- `01_INDICE.md` passou a listar os templates operacionais, incluindo o contrato do Status Report das Squads.
+- `02_ROTAS.md` passou a incluir a Rota 4.1 — Status Report semanal das Squads.
+- `02_ROTAS.md` passou a incluir a Rota 10 — Validar, comitar, auditar ou limpar Grimório Galápagos.
+
+### Decisões
+
+- Status Report semanal das Squads deve usar o contrato em `templates/status-report-squads/`.
+- Pedido de todos os times juntos deve ser interpretado como cards comparáveis por squad em uma página, não como dashboard executivo genérico.
+- Antes de gerar imagem final, a IA deve apresentar prévia textual auditada das contagens e leituras por squad.
+- Conteúdo novo comitado sem validação, rota e mecanismo de recuperação não deve ser tratado como incorporado ao Grimório Galápagos.
+
+### Limites
+
+- A tentativa de criar `templates/status-report-squads/README.md` foi bloqueada pela ferramenta. A recuperação do template ficou garantida por `01_INDICE.md` e `02_ROTAS.md`.
+- A generalização para o Grimório Pai fica pendente para etapa posterior.
+
 ## 2026-06-11 — Correção com ODTs validados
 
 ### Adicionado
