@@ -1,0 +1,9 @@
+adicionar pacote aditivo de protecao documental sem sobrescrita
+
+ou
+
+adicionar rascunhos de governanca, autoria e protecao para auditoria futura
+
+ou
+
+incluir politicas draft de protecao sem alterar arquivos oficiais existentes
