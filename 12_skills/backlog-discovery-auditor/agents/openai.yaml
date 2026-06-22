@@ -1,0 +1,5 @@
+interface:
+  display_name: "Backlog Discovery Auditor"
+  short_description: "Audit initiatives, epics, features, and stories for clarity, traceability, and decomposition quality."
+  icon: "tree"
+  accent_color: "#315f72"

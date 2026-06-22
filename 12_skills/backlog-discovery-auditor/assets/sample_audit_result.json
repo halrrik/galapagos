@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "project_name": "sample backlog",
+    "generated_at": "2026-06-22T00:00:00Z",
+    "model_version": "backlog-discovery-auditor v0.2.0-hardening-test",
+    "notes": [
+      "Synthetic sample for skill packaging validation."
+    ]
+  },
+  "summary": {
+    "total_items": 3,
+    "scored_items": 3,
+    "global_score": 58,
+    "rating_label": "fragile",
+    "label_counts": {
+      "adjustable": 1,
+      "fragile": 1,
+      "critical": 1
+    },
+    "critical_findings": [
+      "Feature has child story without executable information."
+    ]
+  },
+  "items": [
+    {
+      "id": "F-1",
+      "type": "feature",
+      "title": "Enable approval workflow",
+      "description": "Allow authorized users to approve or reject requests with auditable decision history.",
+      "parent_id": "",
+      "status": "New",
+      "score": 50,
+      "rating_label": "fragile",
+      "artifact_quality_score": 82,
+      "relationship_quality_score": 30,
+      "maturity_risk": "medium",
+      "score_trace": {
+        "base_score": 78,
+        "artifact_quality_score": 82,
+        "relationship_quality_score": 30,
+        "maturity_risk": "medium",
+        "caps_applied": [
+          "parent_all_children_empty_high_score"
+        ],
+        "cap_applied": true,
+        "cap_value": 50,
+        "cap_reason": "The feature is understandable, but its only direct child story lacks executable information, creating false readiness.",
+        "cap_not_applied_reason": "",
+        "final_score": 50,
+        "rating_label": "fragile",
+        "status_used_as_quality_input": false
+      },
+      "intrinsic_assessment": "The feature states a recognizable workflow and decision history objective.",
+      "relational_assessment": "The direct child story does not provide enough detail to execute or validate the feature.",
+      "pitch": "The feature is directionally clear, but the child story is empty, so the decomposition creates false readiness.",
+      "evidence_bullets": [
+        "Feature describes approval/rejection and audit history.",
+        "Only direct child story lacks meaningful description or acceptance criteria."
+      ],
+      "impact_bullets": [
+        "Execution could start without knowing the expected behavior or validation path."
+      ],
+      "recommendation_bullets": [
+        "Rewrite the child story with expected behavior and acceptance criteria before relying on this feature as ready."
+      ],
+      "confidence": "medium",
+      "evidence_sources_used": [
+        "description",
+        "children"
+      ]
+    },
+    {
+      "id": "US-1",
+      "type": "user_story",
+      "title": "Approve request",
+      "description": "",
+      "parent_id": "F-1",
+      "status": "New",
+      "score": 35,
+      "rating_label": "critical",
+      "artifact_quality_score": 20,
+      "relationship_quality_score": 40,
+      "maturity_risk": "medium",
+      "score_trace": {
+        "base_score": 35,
+        "artifact_quality_score": 20,
+        "relationship_quality_score": 40,
+        "maturity_risk": "medium",
+        "caps_applied": [
+          "empty_story"
+        ],
+        "cap_applied": true,
+        "cap_value": 55,
+        "cap_reason": "The story lacks description, objective, and acceptance evidence.",
+        "cap_not_applied_reason": "",
+        "final_score": 35,
+        "rating_label": "critical",
+        "status_used_as_quality_input": false
+      },
+      "intrinsic_assessment": "The story is only a title and does not provide executable information.",
+      "relational_assessment": "The title relates to the parent, but the story does not explain the slice of behavior.",
+      "pitch": "This story cannot be used safely because it lacks the information needed for execution or validation.",
+      "evidence_bullets": [
+        "Description is empty.",
+        "No acceptance criteria were provided."
+      ],
+      "impact_bullets": [
+        "Developers and product stakeholders would need to infer the behavior."
+      ],
+      "recommendation_bullets": [
+        "Add expected behavior, scope boundary, and observable acceptance criteria."
+      ],
+      "confidence": "high",
+      "evidence_sources_used": [
+        "title",
+        "description"
+      ]
+    },
+    {
+      "id": "US-2",
+      "type": "user_story",
+      "title": "Reject request with reason",
+      "description": "A reviewer can reject a pending request and must provide a reason visible in the request history.",
+      "acceptance_criteria": "Given a pending request, when a reviewer rejects it with a reason, then the request status changes and the reason appears in history.",
+      "parent_id": "F-1",
+      "status": "New",
+      "score": 72,
+      "rating_label": "adjustable",
+      "artifact_quality_score": 76,
+      "relationship_quality_score": 70,
+      "maturity_risk": "low",
+      "score_trace": {
+        "base_score": 72,
+        "artifact_quality_score": 76,
+        "relationship_quality_score": 70,
+        "maturity_risk": "low",
+        "caps_applied": [],
+        "cap_applied": false,
+        "cap_value": null,
+        "cap_reason": "",
+        "cap_not_applied_reason": "",
+        "final_score": 72,
+        "rating_label": "adjustable",
+        "status_used_as_quality_input": false
+      },
+      "intrinsic_assessment": "The story has behavior and a testable acceptance path.",
+      "relational_assessment": "It supports rejection behavior within the parent approval workflow.",
+      "pitch": "This story is usable but still needs edge cases and permission boundaries before it becomes healthy.",
+      "evidence_bullets": [
+        "Description states actor, action, reason, and history visibility.",
+        "Acceptance criteria are observable."
+      ],
+      "impact_bullets": [
+        "Permission and invalid-state behavior remain implicit."
+      ],
+      "recommendation_bullets": [
+        "Add acceptance criteria for unauthorized users and non-pending requests."
+      ],
+      "confidence": "high",
+      "evidence_sources_used": [
+        "description",
+        "acceptance_criteria",
+        "parent"
+      ]
+    }
+  ],
+  "tree": []
+}

@@ -1,0 +1,7 @@
+id,type,title,description,parent,acceptance criteria,objectives,risks,dependencies,comments
+INIT-1,Initiative,Improve invoice approval,Reduce manual approval work and increase traceability for finance invoices.,,,Reduce manual rework and approval delay,,,
+EPIC-1,Epic,Approval workflow,Create the main workflow needed to approve or reject invoices.,INIT-1,,,,,
+FEAT-1,Feature,Approve and reject invoices,Users must be able to approve or reject invoices with visible reasons.,EPIC-1,,,,ERP integration needed,
+US-1,User Story,Approve invoice,Finance approver can approve a pending invoice.,FEAT-1,Given a pending invoice when an approver approves then invoice status changes to approved.,,,,
+US-2,User Story,Reject invoice,Finance approver can reject an invoice.,FEAT-1,,,,,Missing rejection reason validation.
+US-3,User Story,View dashboard,Create a dashboard for operational metrics.,FEAT-1,Dashboard loads metrics.,,,,
